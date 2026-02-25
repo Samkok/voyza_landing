@@ -6,8 +6,86 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply antialiased;
   }
+}
+
+/* ─── Hero phone animations ─── */
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-14px) rotate(0.4deg); }
+  66%       { transform: translateY(-7px) rotate(-0.4deg); }
+}
+
+@keyframes phoneGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.45),
+      0 0 0 1px rgba(255,255,255,0.08),
+      0 0 40px rgba(59,130,246,0.12);
+  }
+  50% {
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.45),
+      0 0 0 1px rgba(255,255,255,0.08),
+      0 0 70px rgba(59,130,246,0.28),
+      0 0 120px rgba(168,85,247,0.14);
+  }
+}
+
+@keyframes badgeFloat1 {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50%       { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes badgeFloat2 {
+  0%, 100% { transform: translateY(0px) rotate(1deg); }
+  50%       { transform: translateY(10px) rotate(-1deg); }
+}
+
+@keyframes shimmerSlide {
+  0%   { transform: translateX(-100%) skewX(-20deg); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateX(300%) skewX(-20deg); opacity: 0; }
+}
+
+.hero-phone-float {
+  animation: phoneFloat 6s ease-in-out infinite;
+}
+
+.hero-phone-glow {
+  animation: phoneGlowPulse 4s ease-in-out infinite;
+}
+
+.hero-badge-1 {
+  animation: badgeFloat1 3.5s ease-in-out infinite;
+}
+
+.hero-badge-2 {
+  animation: badgeFloat2 4.2s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.hero-badge-3 {
+  animation: badgeFloat1 4.8s ease-in-out infinite;
+  animation-delay: 0.7s;
+}
+
+.hero-screen-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.055) 50%,
+    transparent 60%
+  );
+  animation: shimmerSlide 7s ease-in-out infinite;
+  animation-delay: 2.5s;
+  pointer-events: none;
+  border-radius: inherit;
 }

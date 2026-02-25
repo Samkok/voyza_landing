@@ -1,6 +1,6 @@
 export default function CTA() {
   return (
-    <section className="relative bg-gradient-to-br from-primary-600 via-accent-600 to-teal-600 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="download" className="relative bg-gradient-to-br from-primary-600 via-accent-600 to-teal-600 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.2),transparent_50%)]"></div>
       <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
@@ -12,7 +12,7 @@ export default function CTA() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/voyza/id6758559163" target="_blank"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-primary-600 font-bold rounded-xl hover:bg-gray-50 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
           >
             <svg
@@ -26,7 +26,7 @@ export default function CTA() {
             App Store
           </a>
           <a
-            href="#"
+            href="https://play.google.com/store/apps/details?id=com.superiordev.voyza" target="_blank"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-primary-600 font-bold rounded-xl hover:bg-gray-50 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105"
           >
             <svg

@@ -174,11 +174,6 @@ VoyZa Pro + Collaboration adds the ability to invite others, assign permissions,
         "Yes. VoyZa respects your privacy. Anonymous data is stored locally. Authenticated users' data is securely stored in our backend (Supabase). For full details, see our Privacy Policy.",
     },
     {
-      question: 'Can I plan trips offline?',
-      answer:
-        'Offline planning is available for VoyZa Pro subscribers. Free users can only use the app online with local storage for anonymous trips.',
-    },
-    {
       question: 'Can I cancel my subscription?',
       answer:
         'Yes. Subscriptions can be canceled anytime through Apple App Store or Google Play Store. Cancelling stops future payments but does not automatically refund prior charges.',
