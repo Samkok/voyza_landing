@@ -32,6 +32,23 @@ export default function Hero() {
                 See How It Works
               </a>
             </div>
+
+            {/* Product Hunt badge */}
+            <div className="flex justify-center lg:justify-start">
+              <a
+                href="https://www.producthunt.com/products/voyza?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-voyza"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="VoyZa - Multi-stop route planning made simple | Product Hunt"
+                  width={250}
+                  height={54}
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1085800&theme=light&t=1772102872849"
+                />
+              </a>
+            </div>
+
           </div>
 
           {/* ── Phone mockup side ── */}
