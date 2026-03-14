@@ -60,15 +60,17 @@ export default function PrivacyPage() {
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">1.2 Location Data</h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>The App allows users to add and manage locations manually</li>
-                <li>VoyZa does not track your real-time GPS location in the background</li>
-                <li>Any location data you add is:
-                  <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li>Stored locally on your device (anonymous users), or</li>
-                    <li>Stored securely in our database (authenticated users)</li>
-                  </ul>
-                </li>
+              <p className="text-gray-700 leading-relaxed">
+                VoyZa uses location data to help you plan multi-stop trips, center the map on your current position, and assist with adding your current location as a stop.
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700 mt-3">
+                <li><span className="font-semibold">Type of location data collected:</span> Precise location (GPS), used only while the app is open and in the foreground</li>
+                <li><span className="font-semibold">When it is collected:</span> Only while you are actively using the App — never in the background</li>
+                <li><span className="font-semibold">Why we collect it:</span> To center the map on your current position and allow you to quickly add your current location as a stop in your trip</li>
+                <li><span className="font-semibold">How it is used:</span> To display your location on the map and assist with route planning between stops</li>
+                <li><span className="font-semibold">Who it is shared with:</span> Your device location is not shared with third parties. Mapping and routing functionality is provided via Apple Maps / Google Maps SDKs on-device</li>
+                <li><span className="font-semibold">How long it is retained:</span> Your real-time device location is never stored by VoyZa. Only locations you explicitly add to a trip are saved — locally on your device (anonymous users) or securely in our database (authenticated users) — and retained until you delete them</li>
+                <li><span className="font-semibold">User control:</span> Location permission is entirely optional. You can add locations manually without granting location access. You can revoke location permission at any time via your device settings</li>
               </ul>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">1.3 Subscription & Purchase Information</h3>
