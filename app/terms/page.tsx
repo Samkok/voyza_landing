@@ -128,13 +128,6 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">5. Ads</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Free users may see advertisements. VoyZa is not responsible for the content of third-party ads or external links.
-              </p>
-            </section>
-
-            <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">6. Acceptable Use</h2>
               <p className="text-gray-700 leading-relaxed">
                 You agree not to:
