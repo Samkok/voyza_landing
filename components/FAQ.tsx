@@ -120,16 +120,6 @@ export default function FAQ() {
         'No. You can start using VoyZa as an anonymous user and save locations locally on your device. Creating an account lets you sync trips across devices, access premium features, and collaborate with others.',
     },
     {
-      question: 'How many locations can I add in the free version?',
-      answer:
-        'Free users can add up to 5 locations per trip. To add unlimited locations, remove ads, and access advanced features like offline maps and route optimization, you can upgrade to VoyZa Pro.',
-    },
-    {
-      question: 'What happens if I exceed the free location limit?',
-      answer:
-        "When you try to add your 6th location, VoyZa will prompt you to either watch an ad (if you're a free user) or upgrade to VoyZa Pro for unlimited locations.",
-    },
-    {
       question: 'Can I collaborate with friends on a trip?',
       answer:
         'Yes. VoyZa Pro + Collaboration allows you to invite others to a trip, assign permissions (read-only or write access), and update locations in real-time. One person must be the trip owner and have a subscription; collaborators join for free.',
