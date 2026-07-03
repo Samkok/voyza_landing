@@ -65,50 +65,18 @@ npm run build
 npm start
 ```
 
-## Firebase Deployment
+## Deployment (Vercel)
 
-This project is configured for Firebase Hosting with static export.
+This project is hosted on [Vercel](https://vercel.com) as a Next.js static export (`output: 'export'` in `next.config.js`), which is perfect for a landing page with no server-side requirements.
 
-### Prerequisites
+### Deploy
 
-1. Install Firebase CLI globally (if not already installed):
-```bash
-npm install -g firebase-tools
-```
+Deployment is automatic via Vercel's GitHub integration: **push to the `main` branch and Vercel builds and deploys to production.** There is no manual deploy step, and build artifacts (`.next/`, `out/`) are gitignored — Vercel builds from source.
 
-2. Login to Firebase:
-```bash
-firebase login
-```
+For a rare one-off manual deploy you can run `npx vercel --prod` with the Vercel CLI, but the standard flow is push-to-`main`.
 
-3. Verify the project is linked:
-```bash
-firebase projects:list
-```
+### Referral invite pages
 
-### Deploy to Firebase
+`public/r/index.html` is a self-contained referral invite page. `vercel.json` rewrites every `/r/{CODE}` path to it, so share links like `https://voyza.xtremon.com/r/VOYZA-ABC234` render with the referral code shown and route the visitor to the app store.
 
-1. Build and deploy:
-```bash
-npm run deploy
-```
-
-Or deploy separately:
-```bash
-npm run build
-npm run firebase:deploy
-```
-
-2. Test locally before deploying:
-```bash
-npm run build
-npm run firebase:serve
-```
-
-### Firebase Configuration
-
-- **Project ID**: `voyza-landing`
-- **Hosting Directory**: `out` (Next.js static export output)
-- **Configuration**: `firebase.json` and `.firebaserc`
-
-The project is configured to export as a static site, which is perfect for a landing page with no server-side requirements.
+Because the rewrite runs on Vercel's platform, the `/r/{CODE}` path only resolves once deployed — not in `next dev` or a local static preview (there, only `/r/index.html` and the `?c=CODE` fallback work).
