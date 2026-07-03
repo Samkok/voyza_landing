@@ -73,10 +73,10 @@ export default function PrivacyPage() {
             VoyZa Privacy Policy
           </h1>
           <p className="text-gray-600 text-lg">
-            <span className="font-semibold">Last updated:</span> June 30, 2026
+            <span className="font-semibold">Last updated:</span> July 3, 2026
           </p>
           <p className="text-gray-600 mb-12 text-lg">
-            <span className="font-semibold">Effective date:</span> June 30, 2026
+            <span className="font-semibold">Effective date:</span> July 3, 2026
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -171,7 +171,7 @@ export default function PrivacyPage() {
                     </tr>
                     <tr>
                       <td className={td}><strong className={strong}>Device identifiers</strong></td>
-                      <td className={td}>A Firebase installation/app-instance ID; a RevenueCat app user ID; an FCM push registration token; a locally generated anonymous UUID for pre-sign-up activity; a device ID (Android ID or iOS identifier-for-vendor) used for free-trial abuse prevention; and, on Android, the Advertising ID (analytics/measurement signals only; not collected before consent for EEA/UK/CH users — see Section 6).</td>
+                      <td className={td}>A Firebase installation/app-instance ID; a RevenueCat app user ID; an FCM push registration token; a locally generated anonymous UUID for pre-sign-up activity; a device ID (Android ID or iOS identifier-for-vendor) used for free-trial and referral abuse prevention; and, on Android, the Advertising ID (analytics/measurement signals only; not collected before consent for EEA/UK/CH users — see Section 6).</td>
                       <td className={td}>Device/OS APIs and SDK-generated</td>
                       <td className={td}>Firebase/Google, RevenueCat, and Supabase (push token in <Code>device_tokens</Code>; abuse-prevention device ID in <Code>trial_devices</Code>). The anonymous UUID stays on your device.</td>
                     </tr>
@@ -189,9 +189,15 @@ export default function PrivacyPage() {
                     </tr>
                     <tr>
                       <td className={td}><strong className={strong}>Support &amp; communications</strong></td>
-                      <td className={td}>The content of emails you send us and emails we send you (e.g., onboarding welcome, activation reminder, win-back; password reset and other authentication emails are sent via Supabase Auth).</td>
+                      <td className={td}>The content of emails you send us and emails we send you (e.g., onboarding welcome, activation reminder, referral reward, win-back; password reset and other authentication emails are sent via Supabase Auth).</td>
                       <td className={td}>You / our email service</td>
                       <td className={td}>Our inbox; lifecycle emails are sent via Resend; authentication emails (e.g., password reset) are sent via Supabase Auth's email service.</td>
+                    </tr>
+                    <tr>
+                      <td className={td}><strong className={strong}>Referrals &amp; invitations</strong></td>
+                      <td className={td}>Your personal referral code; a referral record linking you (as referrer) to the person who accepts your invitation (as referee) and the resulting reward status; and, when you invite someone who is <strong className={strong}>not yet</strong> a VoyZa user, the email address you entered for them together with the trip you invited them to and your referral code.</td>
+                      <td className={td}>You (by inviting someone or entering a referral code)</td>
+                      <td className={td}>Supabase (<Code>referral_codes</Code>, <Code>referrals</Code>, and <Code>pending_trip_invites</Code>). A pending-invitation email is stored only until that person signs up or the invitation expires (30 days), after which it is deleted. Used to operate the referral program, connect an invited person to your trip, reward eligible referrers and referees with promotional VoyZa Pro, and prevent referral fraud.</td>
                     </tr>
                   </tbody>
                 </table>
@@ -204,7 +210,7 @@ export default function PrivacyPage() {
 
               <h3 className={h3}>Free-trial abuse prevention (device check)</h3>
               <p className={p}>
-                To enforce one free trial per device and prevent abuse of our free tier, when you start a trial we read a device identifier (the Android ID on Android, or the identifier-for-vendor on iOS) and store it with your user ID and the product in our <Code>trial_devices</Code> registry. This is a persistent, hardware-linked identifier used solely to detect repeated free-trial sign-ups on the same device. We do not use it for advertising. See Sections 4 (lawful basis and balancing test), 10 (retention), and 13 (your right to object and our automated-processing statement).
+                To enforce one free trial per device and prevent abuse of our free tier, when you start a trial we read a device identifier (the Android ID on Android, or the identifier-for-vendor on iOS) and store it with your user ID and the product in our <Code>trial_devices</Code> registry. This is a persistent, hardware-linked identifier used to prevent abuse of our free and promotional offers — repeated free-trial sign-ups on the same device, and referral rewards claimed by referring an additional account of your own on a device you have already used. We do not use it for advertising. See Sections 4 (lawful basis and balancing test), 10 (retention), and 13 (your right to object and our automated-processing statement).
               </p>
             </section>
 
@@ -214,11 +220,12 @@ export default function PrivacyPage() {
               <p className={p}>We use your personal information to:</p>
               <ul className={ul}>
                 <li><strong className={strong}>Provide the App:</strong> create and manage your account, save your trips and places, optimize multi-stop routes, show maps, autocomplete and search for places, geocode addresses, and sync your data across devices.</li>
-                <li><strong className={strong}>Enable collaboration:</strong> let you invite others to a trip and share trip content with the collaborators you choose (see Section 7).</li>
+                <li><strong className={strong}>Enable collaboration:</strong> let you invite others to a trip and share trip content with the collaborators you choose; if you invite someone who does not yet have a VoyZa account, we hold a pending invitation (keyed to the email you entered) so they can join that trip when they sign up (see Section 7).</li>
                 <li><strong className={strong}>Process subscriptions:</strong> manage purchases, trials, restores, and entitlements through RevenueCat and the app stores.</li>
                 <li><strong className={strong}>Send notifications and transactional email:</strong> deliver push notifications about trip activity and collaboration, and transactional emails such as password reset.</li>
                 <li><strong className={strong}>Send lifecycle / marketing email (with opt-out):</strong> send onboarding (welcome), activation-reminder, and win-back emails. These are sent on a soft opt-in / legitimate-interest basis and you can unsubscribe at any time (see Section 4).</li>
-                <li><strong className={strong}>Prevent abuse and secure the service:</strong> enforce one free trial per device, detect fraud and misuse, and protect the integrity of the App.</li>
+                <li><strong className={strong}>Operate the referral and invitation program:</strong> let you invite friends and collaborators, connect an invited person to the trip and to you when they join, grant referral rewards (promotional VoyZa Pro to eligible referrers and referees), and prevent referral fraud (see Sections 4 and 7).</li>
+                <li><strong className={strong}>Prevent abuse and secure the service:</strong> enforce one free trial per device, prevent referral fraud, detect other fraud and misuse, and protect the integrity of the App.</li>
                 <li><strong className={strong}>Understand and improve the App:</strong> measure how features are used through analytics and monitor performance and stability (subject to consent where required — see Section 6).</li>
                 <li><strong className={strong}>Measure advertising:</strong> attribute installs and conversions from our marketing campaigns (see Section 6).</li>
                 <li><strong className={strong}>Request feedback:</strong> occasionally show the native in-app rating prompt after you complete an action such as optimizing a route. This prompt is handled entirely by Apple or Google; we do not receive any personal data from it.</li>
@@ -253,6 +260,11 @@ export default function PrivacyPage() {
                       <td className={td}>Performance of a contract — Art. 6(1)(b)</td>
                     </tr>
                     <tr>
+                      <td className={td}>Operate the referral and invitation program, including holding a pending invitation and its email so an invited person can join your trip and both sides can be rewarded</td>
+                      <td className={td}>Referrals &amp; invitations; account &amp; identity</td>
+                      <td className={td}>Taking steps at your request / performance of a contract — Art. 6(1)(b); and legitimate interests in running a referral program and connecting invited users — Art. 6(1)(f). For the email of a person who is not yet a user, we rely on our legitimate interest in delivering the invitation you asked us to send, balanced against their interests through data minimization and short retention (deleted on sign-up or after 30 days).</td>
+                    </tr>
+                    <tr>
                       <td className={td}>Process subscriptions, trials, restores, and entitlements; share email/name/phone with RevenueCat as subscriber attributes to operate billing</td>
                       <td className={td}>Purchases &amp; subscriptions; account &amp; identity</td>
                       <td className={td}>Performance of a contract — Art. 6(1)(b); and legitimate interests in fraud-resistant billing and account linkage — Art. 6(1)(f)</td>
@@ -268,7 +280,7 @@ export default function PrivacyPage() {
                       <td className={td}>Consent / soft opt-in — Art. 6(1)(a) / PECR Reg. 22; you can unsubscribe by emailing us</td>
                     </tr>
                     <tr>
-                      <td className={td}>Prevent free-trial abuse via the device check (persistent device identifier)</td>
+                      <td className={td}>Prevent free-trial and referral abuse via the device check (persistent device identifier)</td>
                       <td className={td}>Abuse-prevention device ID</td>
                       <td className={td}>Legitimate interests — Art. 6(1)(f); see the balancing-test summary below</td>
                     </tr>
@@ -296,7 +308,7 @@ export default function PrivacyPage() {
                 </table>
               </div>
               <p className={p}>
-                <strong className={strong}>Device-check balancing test (legitimate-interest assessment, Art. 6(1)(f) + ePrivacy/PECR).</strong> We rely on legitimate interests to read and store a persistent, hardware-linked device identifier solely to enforce one free trial per device. We conducted a balancing test and concluded that: (a) the interest (preventing repeat-trial abuse of a paid service) is legitimate and necessary; (b) the processing is limited to a single identifier tied to your account and product, is never used for advertising or cross-app tracking, and is retained for a limited period (see Section 10); and (c) the limited impact on you does not override our interest, particularly given your right to object below. Because reading an identifier from the device can engage ePrivacy/PECR, for EEA/UK/CH users this access occurs only in connection with a trial you actively start (a service you request) and is not used for any non-essential analytics or advertising purpose. You can <strong className={strong}>object</strong> to this processing at any time (see Section 13); we will assess any objection and, where it succeeds, cease the processing.
+                <strong className={strong}>Device-check balancing test (legitimate-interest assessment, Art. 6(1)(f) + ePrivacy/PECR).</strong> We rely on legitimate interests to read and store a persistent, hardware-linked device identifier to prevent abuse of our free and promotional offers — enforcing one free trial per device and preventing referral-reward abuse (such as referring an additional account of your own on a device you have already used). We conducted a balancing test and concluded that: (a) the interest (preventing repeat-trial and referral-reward abuse of a paid service) is legitimate and necessary; (b) the processing is limited to a single identifier tied to your account and product, is never used for advertising or cross-app tracking, and is retained for a limited period (see Section 10); and (c) the limited impact on you does not override our interest, particularly given your right to object below. Because reading an identifier from the device can engage ePrivacy/PECR, for EEA/UK/CH users this access occurs only in connection with a trial you actively start (a service you request) and is not used for any non-essential analytics or advertising purpose. You can <strong className={strong}>object</strong> to this processing at any time (see Section 13); we will assess any objection and, where it succeeds, cease the processing.
               </p>
               <p className={p}>
                 <strong className={strong}>Marketing email — soft opt-in.</strong> Lifecycle/marketing emails (welcome, activation reminder, win-back) are treated as direct marketing. We send them on a soft opt-in / consent basis to people who have an account, and you can unsubscribe at any time by emailing <Mail />; we will promptly stop sending them. Transactional and authentication emails (e.g., password reset) are separate and necessary to provide the service.
@@ -374,7 +386,8 @@ export default function PrivacyPage() {
                 Collaboration is a core feature of VoyZa, and it is the most important sharing surface to understand.
               </p>
               <ul className={ul}>
-                <li><strong className={strong}>Inviting collaborators:</strong> You invite someone to a trip by entering their email address. Our backend (Supabase) checks whether that email belongs to an existing VoyZa account and, if so, links them to the trip. An invite only succeeds if the invitee already has a VoyZa account.</li>
+                <li><strong className={strong}>Inviting collaborators:</strong> You invite someone to a trip by entering their email address. If that email belongs to an existing VoyZa account, our backend (Supabase) links them to the trip. If it does <strong className={strong}>not</strong> yet belong to a VoyZa account, we store a <strong className={strong}>pending invitation</strong> — the email address you entered, the trip, your user ID, and your referral code — so that when that person signs up with the same email they are automatically added to the trip and both of you may receive a referral reward. A pending invitation is deleted when it is claimed or when it expires (30 days). Only invite people who are happy to be contacted and added.</li>
+                <li><strong className={strong}>Referral program:</strong> When you share a referral link or code and someone signs up through it — or when you invite a non-user as described above — we record a referral connecting you (the referrer) to that person (the referee) so we can grant the reward. Both of you may receive promotional VoyZa Pro when the referee starts a qualifying trial or subscription. Referral rewards are subject to anti-fraud checks and the limits described in the app's Terms; see Sections 3 and 4.</li>
                 <li><strong className={strong}>What collaborators can see:</strong> Once added, a collaborator with read or write access can see the <strong className={strong}>entire</strong> trip's contents — all saved places (names, precise coordinates, addresses, photos, scheduled dates, notes, durations) and the trip name, description, and dates. Edits stream between collaborators in real time.</li>
                 <li><strong className={strong}>Collaborator emails are visible to the group:</strong> Every member of a shared trip can see the email address of every other member, and who invited whom.</li>
                 <li><strong className={strong}>CSV export / OS share sheet:</strong> When you export a trip to CSV or use your device's share sheet, the full itinerary (place names, addresses, scheduled dates, durations, travel times) leaves the App and is sent to whatever app or person you choose. Once you share it, that data is outside our control.</li>
@@ -549,6 +562,7 @@ export default function PrivacyPage() {
                 <li><strong className={strong}>Subscription and purchase records:</strong> retained for the life of the subscription relationship and then for up to <strong className={strong}>7 years</strong> to meet legal, tax, and accounting obligations.</li>
                 <li><strong className={strong}>Subscription event history (<Code>user_subscription_history</Code>):</strong> a per-event audit log retained to support billing accuracy and reconciliation. Events recorded before you sign up are keyed only to an anonymous store identifier (no account link); a signed-up user's history is deleted when you delete your account.</li>
                 <li><strong className={strong}>Push tokens:</strong> an inactive token is retained to suppress stale deliveries; all push tokens are deleted when you delete your account.</li>
+                <li><strong className={strong}>Referrals and invitations:</strong> your referral code and referral records (who referred whom, and reward status) are retained while your account is active and deleted when you delete your account. A pending invitation to a person who is not yet a user (their email, the trip, and your referral code) is deleted as soon as it is claimed or after it expires (<strong className={strong}>30 days</strong>), whichever comes first.</li>
                 <li><strong className={strong}>Abuse-prevention device IDs (<Code>trial_devices</Code>):</strong> retained for as long as necessary to enforce the one-free-trial-per-device limit, and <strong className={strong}>de-linked from your account</strong> (the account reference is cleared) when you delete your account, consistent with storage limitation (Art. 5(1)(e)).</li>
                 <li><strong className={strong}>Analytics and advertising data (GA4):</strong> user-level data is retained in Google Analytics 4 for the configured <strong className={strong}>14-month</strong> user-data retention window and then automatically deleted; aggregated reporting may persist longer in de-identified form.</li>
                 <li><strong className={strong}>Performance / stability data (Firebase Performance):</strong> retained for Firebase's standard performance retention window (up to approximately <strong className={strong}>90 days</strong> for detailed traces).</li>
@@ -576,11 +590,11 @@ export default function PrivacyPage() {
               </p>
               <ul className={ul}>
                 <li>delete your profile, trips, and saved locations from our servers;</li>
-                <li>cascade-delete your trip collaborations, associated subscription records, and your stored push tokens (<Code>device_tokens</Code>); and</li>
+                <li>cascade-delete your trip collaborations, your referral code and referral records, any pending invitations you created, associated subscription records, and your stored push tokens (<Code>device_tokens</Code>); and</li>
                 <li>clear VoyZa data stored locally on your device.</li>
               </ul>
               <p className={p}>
-                <strong className={strong}>Retained after deletion:</strong> To enforce our one-free-trial-per-device limit, the device identifier in our abuse-prevention registry (<Code>trial_devices</Code>) is retained after account deletion — de-linked from your account — for the period stated in Section 10. See Sections 2 and 10. Some other information may be retained where we are legally required to keep it (for example, transaction records for tax purposes) or in backups for a limited period before being overwritten. Content you previously shared with collaborators or exported (for example, via CSV) may remain with those recipients.
+                <strong className={strong}>Retained after deletion:</strong> To enforce our one-free-trial-per-device limit and prevent referral-reward abuse, the device identifier in our abuse-prevention registry (<Code>trial_devices</Code>) is retained after account deletion — de-linked from your account — for the period stated in Section 10. See Sections 2 and 10. Some other information may be retained where we are legally required to keep it (for example, transaction records for tax purposes) or in backups for a limited period before being overwritten. Content you previously shared with collaborators or exported (for example, via CSV) may remain with those recipients.
               </p>
               <p className={p}>
                 <strong className={strong}>Deleting without the App.</strong> If you cannot access the App, you can request account and data deletion via our web route at <Ext href="https://voyza.xtremon.com/#how-can-i-delete-my-voyza-account">https://voyza.xtremon.com/#how-can-i-delete-my-voyza-account</Ext>, or by emailing <Mail />. This web route is also referenced in our Google Play and App Store data-handling declarations.
