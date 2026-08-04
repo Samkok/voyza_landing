@@ -73,10 +73,10 @@ export default function PrivacyPage() {
             VoyZa Privacy Policy
           </h1>
           <p className="text-gray-600 text-lg">
-            <span className="font-semibold">Last updated:</span> July 3, 2026
+            <span className="font-semibold">Last updated:</span> August 5, 2026
           </p>
           <p className="text-gray-600 mb-12 text-lg">
-            <span className="font-semibold">Effective date:</span> July 3, 2026
+            <span className="font-semibold">Effective date:</span> August 5, 2026
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -195,7 +195,7 @@ export default function PrivacyPage() {
                     </tr>
                     <tr>
                       <td className={td}><strong className={strong}>Referrals &amp; invitations</strong></td>
-                      <td className={td}>Your personal referral code; a referral record linking you (as referrer) to the person who accepts your invitation (as referee) and the resulting reward status; and, when you invite someone who is <strong className={strong}>not yet</strong> a VoyZa user, the email address you entered for them together with the trip you invited them to and your referral code.</td>
+                      <td className={td}>Your personal referral code; a referral record linking you (as referrer) to the person who accepts your invitation (as referee) and the resulting reward status (including a reward that has been earned but is held until your current paid subscription period ends); and, when you invite someone who is <strong className={strong}>not yet</strong> a VoyZa user, the email address you entered for them together with the trip you invited them to and your referral code.</td>
                       <td className={td}>You (by inviting someone or entering a referral code)</td>
                       <td className={td}>Supabase (<Code>referral_codes</Code>, <Code>referrals</Code>, and <Code>pending_trip_invites</Code>). A pending-invitation email is stored only until that person signs up or the invitation expires (30 days), after which it is deleted. Used to operate the referral program, connect an invited person to your trip, reward eligible referrers and referees with promotional VoyZa Pro, and prevent referral fraud.</td>
                     </tr>
@@ -224,7 +224,7 @@ export default function PrivacyPage() {
                 <li><strong className={strong}>Process subscriptions:</strong> manage purchases, trials, restores, and entitlements through RevenueCat and the app stores.</li>
                 <li><strong className={strong}>Send notifications and transactional email:</strong> deliver push notifications about trip activity and collaboration, and transactional emails such as password reset.</li>
                 <li><strong className={strong}>Send lifecycle / marketing email (with opt-out):</strong> send onboarding (welcome), activation-reminder, and win-back emails. These are sent on a soft opt-in / legitimate-interest basis and you can unsubscribe at any time (see Section 4).</li>
-                <li><strong className={strong}>Operate the referral and invitation program:</strong> let you invite friends and collaborators, connect an invited person to the trip and to you when they join, grant referral rewards (promotional VoyZa Pro to eligible referrers and referees), and prevent referral fraud (see Sections 4 and 7).</li>
+                <li><strong className={strong}>Operate the referral and invitation program:</strong> let you invite friends and collaborators, connect an invited person to the trip and to you when they join, grant referral rewards (promotional VoyZa Pro to an eligible referee when they sign up with a code, and to the referrer once that person starts a paid subscription), and prevent referral fraud (see Sections 4 and 7).</li>
                 <li><strong className={strong}>Prevent abuse and secure the service:</strong> enforce one free trial per device, prevent referral fraud, detect other fraud and misuse, and protect the integrity of the App.</li>
                 <li><strong className={strong}>Understand and improve the App:</strong> measure how features are used through analytics and monitor performance and stability (subject to consent where required — see Section 6).</li>
                 <li><strong className={strong}>Measure advertising:</strong> attribute installs and conversions from our marketing campaigns (see Section 6).</li>
@@ -387,7 +387,7 @@ export default function PrivacyPage() {
               </p>
               <ul className={ul}>
                 <li><strong className={strong}>Inviting collaborators:</strong> You invite someone to a trip by entering their email address. If that email belongs to an existing VoyZa account, our backend (Supabase) links them to the trip. If it does <strong className={strong}>not</strong> yet belong to a VoyZa account, we store a <strong className={strong}>pending invitation</strong> — the email address you entered, the trip, your user ID, and your referral code — so that when that person signs up with the same email they are automatically added to the trip and both of you may receive a referral reward. A pending invitation is deleted when it is claimed or when it expires (30 days). Only invite people who are happy to be contacted and added.</li>
-                <li><strong className={strong}>Referral program:</strong> When you share a referral link or code and someone signs up through it — or when you invite a non-user as described above — we record a referral connecting you (the referrer) to that person (the referee) so we can grant the reward. Both of you may receive promotional VoyZa Pro when the referee starts a qualifying trial or subscription. Referral rewards are subject to anti-fraud checks and the limits described in the app's Terms; see Sections 3 and 4.</li>
+                <li><strong className={strong}>Referral program:</strong> When you share a referral link or code and someone signs up through it — or when you invite a non-user as described above — we record a referral connecting you (the referrer) to that person (the referee) so we can grant the reward. The referee may receive promotional VoyZa Pro when they sign up with your code; your reward is granted only once they go on to start a <strong className={strong}>paid subscription</strong> (after any free trial). If you already have an active paid subscription when a reward is earned, we record it and apply it when your current paid period ends, so the reward is not lost. Referral rewards are subject to anti-fraud checks and the limits described in the app's Terms; see Sections 3 and 4.</li>
                 <li><strong className={strong}>What collaborators can see:</strong> Once added, a collaborator with read or write access can see the <strong className={strong}>entire</strong> trip's contents — all saved places (names, precise coordinates, addresses, photos, scheduled dates, notes, durations) and the trip name, description, and dates. Edits stream between collaborators in real time.</li>
                 <li><strong className={strong}>Collaborator emails are visible to the group:</strong> Every member of a shared trip can see the email address of every other member, and who invited whom.</li>
                 <li><strong className={strong}>CSV export / OS share sheet:</strong> When you export a trip to CSV or use your device's share sheet, the full itinerary (place names, addresses, scheduled dates, durations, travel times) leaves the App and is sent to whatever app or person you choose. Once you share it, that data is outside our control.</li>
