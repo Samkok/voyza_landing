@@ -98,7 +98,7 @@ export default function TermsPage() {
               
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.1 Free and Paid Plans</h3>
               <p className="text-gray-700 leading-relaxed">
-                VoyZa offers both free and paid subscription plans ("VoyZa Pro").
+                VoyZa offers a free tier and paid access to premium features ("VoyZa Pro"). VoyZa Pro is available as an auto-renewing subscription — weekly ("Trip Pass"), monthly, or yearly — or as a one-time Lifetime purchase. Prices, billing period, and any free-trial terms are shown at the point of purchase and may vary by region and over time.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Paid plans may include:
@@ -117,7 +117,7 @@ export default function TermsPage() {
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.2 Billing</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Payments are processed through Apple App Store or Google Play.</li>
-                <li>Subscriptions automatically renew unless canceled through your store account.</li>
+                <li>Subscription plans automatically renew unless canceled through your store account; a Lifetime purchase is one-time and does not renew.</li>
                 <li>VoyZa does not manage refunds directly.</li>
               </ul>
 

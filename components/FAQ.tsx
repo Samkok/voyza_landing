@@ -122,7 +122,7 @@ export default function FAQ() {
     {
       question: 'Can I collaborate with friends on a trip?',
       answer:
-        'Yes. VoyZa Pro + Collaboration allows you to invite others to a trip, assign permissions (read-only or write access), and update locations in real-time. One person must be the trip owner and have a subscription; collaborators join for free.',
+        'Yes. VoyZa Pro lets you invite others to a trip, assign permissions (read-only or write access), and update locations in real-time. One person must be the trip owner and have an active VoyZa Pro plan; collaborators join for free.',
     },
     {
       question: 'Can anonymous users collaborate?',
@@ -139,14 +139,14 @@ Offline maps
 
 Route optimization
 
-Ability to create trips for collaboration
+Trip collaboration — invite others, assign permissions, and sync trips in real-time
 
-VoyZa Pro + Collaboration adds the ability to invite others, assign permissions, and sync trips in real-time.`,
+VoyZa Pro is a single plan with everything included. You can subscribe weekly (Trip Pass), monthly, or yearly, or buy Lifetime access with a one-time payment. Current prices and any free-trial offer are shown in the app before you confirm.`,
     },
     {
       question: 'How does payment and subscription work?',
       answer:
-        'VoyZa subscriptions are handled through the Apple App Store or Google Play Store. Payments are secure and automatically renewed unless canceled via your store account. VoyZa does not directly handle billing or refunds.',
+        'VoyZa purchases are handled through the Apple App Store or Google Play Store. Payments are secure. Subscription plans (Trip Pass, monthly, and yearly) renew automatically unless canceled via your store account; Lifetime is a one-time purchase that does not renew. VoyZa does not directly handle billing or refunds.',
     },
     {
       question: 'Can I restore my purchase on a new device?',
@@ -166,7 +166,7 @@ VoyZa Pro + Collaboration adds the ability to invite others, assign permissions,
     {
       question: 'Can I cancel my subscription?',
       answer:
-        'Yes. Subscriptions can be canceled anytime through Apple App Store or Google Play Store. Cancelling stops future payments but does not automatically refund prior charges.',
+        'Yes. Subscriptions can be canceled anytime through Apple App Store or Google Play Store. Cancelling stops future payments but does not automatically refund prior charges. Lifetime access is a one-time purchase, so there is nothing to cancel.',
     },
     {
       question: 'Who do I contact for support?',
