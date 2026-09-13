@@ -150,7 +150,7 @@ export default function Home() {
                 </svg>
               }
               title="Automatically optimize the route"
-              description="Get the most efficient path between all your locations with one tap."
+              description="Get the most efficient path between all your locations with one tap, with no cap on the number of stops."
             />
             <FeatureCard
               colorIndex={2}
@@ -231,6 +231,144 @@ export default function Home() {
               }
               title="Real-time synchronization"
               description="See changes instantly when collaborating with others on shared trips."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="whats-new" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-teal-50/40 to-primary-50/40">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white text-sm font-bold tracking-wide uppercase mb-4 shadow-lg">
+              New in VoyZa
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-teal-600 via-primary-600 to-accent-600 bg-clip-text text-transparent mb-4">
+              Plan every day, not just the route
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+              Auto-plan your days, tag and filter what&apos;s on the map, and let VoyZa keep the plan moving while you travel.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FeatureCard
+              colorIndex={0}
+              icon={
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              }
+              title="Auto-plan your days"
+              description="Spread every saved place across your trip days in one tap, balanced by city. Cap how many places fit in a day, or let VoyZa work it out."
+            />
+            <FeatureCard
+              colorIndex={1}
+              icon={
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                  />
+                </svg>
+              }
+              title="Tag places, read the map at a glance"
+              description="Food, sights, culture, nature, shopping, nightlife, transport, or stay. Pins take the tag's colour, a legend sits on the map, and tags are suggested the moment you add a place."
+            />
+            <FeatureCard
+              colorIndex={2}
+              icon={
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              }
+              title="Carry unvisited places forward"
+              description="Didn't get to everything today? Turn on carry-forward and the stops you missed roll to the next day, with everyone on the trip notified."
+            />
+            <FeatureCard
+              colorIndex={3}
+              icon={
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              }
+              title="Know when you've arrived"
+              description="Set your arrival radius and VoyZa asks whether to mark a place done the moment you reach it, so your plan keeps pace with your feet."
+            />
+            <FeatureCard
+              colorIndex={4}
+              icon={
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              }
+              title="Discover what's nearby"
+              description="Tap anywhere on the map, set a radius, and search places by name around that point, with the distance shown for every result."
+            />
+            <FeatureCard
+              colorIndex={5}
+              icon={
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                  />
+                </svg>
+              }
+              title="Focus on what's left"
+              description="Filter pins to Active, Skipped, or Done and the map zooms to fit exactly that selection and nothing else."
             />
           </div>
         </div>

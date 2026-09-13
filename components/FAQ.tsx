@@ -139,6 +139,8 @@ Offline maps
 
 Route optimization
 
+Auto-plan — apply a day-by-day plan across your whole trip (previewing a plan is free)
+
 Trip collaboration — invite others, assign permissions, and sync trips in real-time
 
 VoyZa Pro is a single plan with everything included. You can subscribe weekly (Trip Pass), monthly, or yearly, or buy Lifetime access with a one-time payment. Current prices and any free-trial offer are shown in the app before you confirm.`,

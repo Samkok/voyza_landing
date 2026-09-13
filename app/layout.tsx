@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'VoyZa - Plan Complex Trips Without the Chaos',
   description: 'VoyZa helps you visualize, optimize, and collaborate on trips with multiple locations. Plan smarter trips today.',
-  keywords: ['trip planning', 'travel app', 'route optimization', 'collaborative travel', 'multi-location trips'],
+  keywords: ['trip planning', 'travel app', 'route optimization', 'collaborative travel', 'multi-location trips', 'itinerary planner', 'day-by-day trip planner', 'travel itinerary'],
   openGraph: {
     title: 'VoyZa - Plan Complex Trips Without the Chaos',
     description: 'VoyZa helps you visualize, optimize, and collaborate on trips with multiple locations.',

@@ -29,7 +29,7 @@ export default function TermsPage() {
             Terms and Conditions
           </h1>
           <p className="text-gray-600 mb-12 text-lg">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            Last updated: September 12, 2026
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -99,6 +99,9 @@ export default function TermsPage() {
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.1 Free and Paid Plans</h3>
               <p className="text-gray-700 leading-relaxed">
                 VoyZa offers a free tier and paid access to premium features ("VoyZa Pro"). VoyZa Pro is available as an auto-renewing subscription — weekly ("Trip Pass"), monthly, or yearly — or as a one-time Lifetime purchase. Prices, billing period, and any free-trial terms are shown at the point of purchase and may vary by region and over time.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                The free plan includes a limited number of saved places (currently 10 per account, plus any bonus slots earned through the referral program); VoyZa Pro removes this cap. We may adjust the free allowance from time to time.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Paid plans may include:
