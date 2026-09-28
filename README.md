@@ -92,6 +92,6 @@ Like `/r/{CODE}`, the path only resolves once deployed; locally use `/c/index.ht
 Tapping `https://voyza.xtremon.com/c/{CODE}` in a messenger can open the app without passing through the page. Each platform checks a file on this site first:
 
 - **iOS** reads `public/.well-known/apple-app-site-association` (app id `J57YQ6F7J9.com.superiordev.voyza`, path `/c/*`). It has no file extension, so `vercel.json` sets its `Content-Type` to `application/json`. The app must also carry the Associated Domains capability with `applinks:voyza.xtremon.com`. Apple caches the file, so a change can take a day to reach phones.
-- **Android** reads `public/.well-known/assetlinks.json`, which lists the SHA-256 fingerprint of the key Google Play signs the app with (Play Console, App signing). That file is **not written yet** — it needs the fingerprint.
+- **Android** reads `public/.well-known/assetlinks.json`, which lists the SHA-256 fingerprint of the key Google Play signs the app with (Play Console → Protected with Play → Play Store distribution → Play app signing → App signing key). If Google ever rotates that key, add the new fingerprint to the list. Builds signed with any other key (a local release build, for one) are not covered and keep opening the page.
 
 The page stays as the fallback in both cases: people without the app, links opened inside a browser, and Android until its file exists.
