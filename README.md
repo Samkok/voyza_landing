@@ -80,3 +80,18 @@ For a rare one-off manual deploy you can run `npx vercel --prod` with the Vercel
 `public/r/index.html` is a self-contained referral invite page. `vercel.json` rewrites every `/r/{CODE}` path to it, so share links like `https://voyza.xtremon.com/r/VOYZA-ABC234` render with the referral code shown and route the visitor to the app store.
 
 Because the rewrite runs on Vercel's platform, the `/r/{CODE}` path only resolves once deployed — not in `next dev` or a local static preview (there, only `/r/index.html` and the `?c=CODE` fallback work).
+
+### Shared trip pages
+
+`public/c/index.html` is the page behind a trip someone shared from the app's trip page. `vercel.json` rewrites every `/c/{CODE}` path to it, so `https://voyza.xtremon.com/c/AB12CD` shows the trip code and an **Open in VoyZa** button. The button hands the code to the installed app (`voyza://copy/AB12CD`; on Android an `intent://` link that falls back to Google Play), which opens its copy-a-trip wizard with the code filled in. Without the app the page offers the store buttons and the code to type.
+
+Like `/r/{CODE}`, the path only resolves once deployed; locally use `/c/index.html?c=AB12CD`.
+
+### Opening the app straight from a shared trip link
+
+Tapping `https://voyza.xtremon.com/c/{CODE}` in a messenger can open the app without passing through the page. Each platform checks a file on this site first:
+
+- **iOS** reads `public/.well-known/apple-app-site-association` (app id `J57YQ6F7J9.com.superiordev.voyza`, path `/c/*`). It has no file extension, so `vercel.json` sets its `Content-Type` to `application/json`. The app must also carry the Associated Domains capability with `applinks:voyza.xtremon.com`. Apple caches the file, so a change can take a day to reach phones.
+- **Android** reads `public/.well-known/assetlinks.json`, which lists the SHA-256 fingerprint of the key Google Play signs the app with (Play Console, App signing). That file is **not written yet** — it needs the fingerprint.
+
+The page stays as the fallback in both cases: people without the app, links opened inside a browser, and Android until its file exists.

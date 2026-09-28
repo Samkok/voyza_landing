@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>A trip was shared with you · VoyZa</title>
+<meta property="og:title" content="A trip for you on VoyZa 🗺️">
+<meta property="og:description" content="Open it to get your own copy — every day and place included, ready to reshape.">
+<meta property="og:type" content="website">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f6f8; color: #16202b; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+  }
+  .card {
+    max-width: 440px; width: 100%; background: #fff; border-radius: 20px;
+    overflow: hidden; border: 1px solid #e6e9ee;
+    box-shadow: 0 10px 30px rgba(22, 32, 43, .08);
+  }
+  .header {
+    background: linear-gradient(135deg, #2B1D70, #2E5BD0 60%, #15BFB6);
+    padding: 26px 28px; color: #fff; font-weight: 800; font-size: 22px;
+  }
+  .body { padding: 28px; }
+  h1 { font-size: 24px; line-height: 1.25; margin-bottom: 10px; }
+  p.sub { color: #46535f; font-size: 15px; line-height: 1.55; margin-bottom: 22px; }
+  .open-btn {
+    display: block; width: 100%; text-align: center; text-decoration: none;
+    background: #2E5BD0; color: #fff; font-weight: 700; font-size: 17px;
+    padding: 16px; border-radius: 12px; margin-bottom: 10px;
+  }
+  .open-btn:focus-visible, .copy-btn:focus-visible, .store-btn:focus-visible {
+    outline: 3px solid #15BFB6; outline-offset: 2px;
+  }
+  .hint {
+    display: none; color: #8a5a00; background: #fff6e0; border: 1px solid #f3dca2;
+    border-radius: 10px; padding: 10px 12px; font-size: 13.5px; line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .hint.show { display: block; }
+  .or { color: #9aa4ad; font-size: 13px; text-align: center; margin: 14px 0 12px; }
+  .code-pill {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background: #eef3ff; border: 2px dashed #2E5BD0; border-radius: 14px;
+    padding: 14px; margin-bottom: 10px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 21px; font-weight: 800; letter-spacing: 2px; color: #16202b;
+  }
+  .copy-btn {
+    width: 100%; border: 1.5px solid #2E5BD0; background: #fff; color: #2E5BD0;
+    font-weight: 700; font-size: 15px; padding: 12px; border-radius: 12px;
+    cursor: pointer; margin-bottom: 24px; font-family: inherit;
+  }
+  .copy-btn.copied { background: #22C55E; border-color: #22C55E; color: #fff; }
+  .steps { color: #46535f; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+  .steps b { color: #16202b; }
+  .stores { display: flex; flex-direction: column; gap: 10px; }
+  .store-btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 700;
+    font-size: 15px; padding: 14px; border-radius: 12px;
+  }
+  .store-primary { background: #16202b; color: #fff; }
+  .store-secondary { background: #fff; color: #16202b; border: 1.5px solid #d4dae2; }
+  .footer { padding: 16px 28px; color: #9aa4ad; font-size: 12px; border-top: 1px solid #eef1f4; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">VoyZa</div>
+    <div class="body">
+      <h1 id="headline">A trip was shared with you</h1>
+      <p class="sub" id="sub">Open it in VoyZa to get your own copy — every
+        day and place comes with it, yours to reshape. The original stays
+        untouched.</p>
+
+      <div id="trip-block">
+        <a class="open-btn" id="open-btn" href="#">Open in VoyZa</a>
+        <div class="hint" id="hint" role="status">Nothing happened? Install
+          VoyZa below, sign in, then tap <b>Open in VoyZa</b> again.</div>
+
+        <div class="or" id="or">or enter the code in the app</div>
+        <div class="code-pill" id="code-pill">TRIP-······</div>
+        <button class="copy-btn" id="copy-btn">Copy code</button>
+      </div>
+
+      <div class="steps" id="steps">
+        <b>New to VoyZa?</b><br>
+        1. Install the app below<br>
+        2. Create your free account<br>
+        3. Come back here and tap <b>Open in VoyZa</b> — or paste the code
+        under “Copy a trip with a code”
+      </div>
+
+      <div class="stores" id="stores">
+        <a class="store-btn store-primary" id="ios-btn"
+           href="https://apps.apple.com/app/id6758559163">Download on the App Store</a>
+        <a class="store-btn store-secondary" id="android-btn"
+           href="https://play.google.com/store/apps/details?id=com.superiordev.voyza">Get it on Google Play</a>
+      </div>
+    </div>
+    <div class="footer">VoyZa · voyza.xtremon.com</div>
+  </div>
+
+<script>
+(function () {
+  // Code from /c/{CODE}, with ?c={CODE} as a fallback for hosts without the
+  // rewrite. Accepts TRIP-XXXXXX or the bare six characters.
+  var m = location.pathname.match(/\/c\/([A-Za-z0-9-]{6,11})\/?$/);
+  var raw = m ? m[1] : (new URLSearchParams(location.search).get('c') || '');
+  var code = raw.toUpperCase().replace(/^TRIP-/, '');
+  var valid = /^[A-Z0-9]{6}$/.test(code);
+
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  // iPadOS reports itself as a Mac; the touch points give it away.
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+      (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+  var playUrl = 'https://play.google.com/store/apps/details?id=com.superiordev.voyza';
+
+  var openBtn = document.getElementById('open-btn');
+  var hint = document.getElementById('hint');
+  var pill = document.getElementById('code-pill');
+  var copyBtn = document.getElementById('copy-btn');
+
+  if (!valid) {
+    // No or malformed code: a plain invitation to the app.
+    document.getElementById('headline').textContent = 'Plan smarter trips with VoyZa';
+    document.getElementById('sub').textContent =
+      'This trip link is incomplete. Ask for it again — or start a trip of your own.';
+    document.getElementById('trip-block').style.display = 'none';
+    document.getElementById('steps').style.display = 'none';
+  } else {
+    pill.textContent = 'TRIP-' + code;
+
+    if (isAndroid) {
+      // An intent link opens the app when it is installed and falls back
+      // to the Play Store when it is not.
+      openBtn.href = 'intent://copy/' + code +
+        '#Intent;scheme=voyza;package=com.superiordev.voyza;' +
+        'S.browser_fallback_url=' + encodeURIComponent(playUrl) + ';end';
+    } else if (isIOS) {
+      openBtn.href = 'voyza://copy/' + code;
+      openBtn.addEventListener('click', function () {
+        // If the app opened, this page is in the background by now.
+        setTimeout(function () {
+          if (document.visibilityState === 'visible') hint.classList.add('show');
+        }, 1800);
+      });
+    } else {
+      // Desktop: the app lives on the phone.
+      openBtn.style.display = 'none';
+      document.getElementById('or').textContent = 'Open this link on your phone, or enter the code in the app';
+    }
+  }
+
+  copyBtn.addEventListener('click', function () {
+    var text = 'TRIP-' + code;
+    function done() {
+      copyBtn.textContent = 'Copied! Paste it in the app';
+      copyBtn.classList.add('copied');
+      setTimeout(function () {
+        copyBtn.textContent = 'Copy code';
+        copyBtn.classList.remove('copied');
+      }, 2500);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta); done();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+  });
+
+  // Put the visitor's own store first.
+  var stores = document.getElementById('stores');
+  var ios = document.getElementById('ios-btn');
+  var android = document.getElementById('android-btn');
+  if (isAndroid) {
+    stores.insertBefore(android, ios);
+    android.className = 'store-btn store-primary';
+    ios.className = 'store-btn store-secondary';
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["J57YQ6F7J9.com.superiordev.voyza"],
+        "components": [
+          {
+            "/": "/c/*",
+            "comment": "Shared trip links open the app's copy-a-trip wizard"
+          }
+        ]
+      }
+    ]
+  }
+}
