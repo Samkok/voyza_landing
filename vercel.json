@@ -7,6 +7,10 @@
     {
       "source": "/c/:code",
       "destination": "/c"
+    },
+    {
+      "source": "/t/:token",
+      "destination": "https://dkbibfjszsohtixjxlle.supabase.co/functions/v1/public-trip?t=:token"
     }
   ],
   "headers": [
