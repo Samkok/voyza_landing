@@ -29,7 +29,7 @@ export default function TermsPage() {
             Terms and Conditions
           </h1>
           <p className="text-gray-600 mb-12 text-lg">
-            Last updated: September 12, 2026
+            Last updated: October 6, 2026
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -43,7 +43,7 @@ export default function TermsPage() {
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">1. Eligibility</h2>
               <p className="text-gray-700 leading-relaxed">
-                You must be at least 13 years old to use VoyZa. By using the App, you represent that you meet this requirement.
+                You must be at least 13 years old to use VoyZa — 16 in the EEA, the UK and Switzerland unless your country sets a lower age of digital consent (see section 14 of the Privacy Policy). By using the App, you represent that you meet this requirement.
               </p>
             </section>
 
@@ -101,17 +101,17 @@ export default function TermsPage() {
                 VoyZa offers a free tier and paid access to premium features ("VoyZa Pro"). VoyZa Pro is available as an auto-renewing subscription — weekly ("Trip Pass"), monthly, or yearly — or as a one-time Lifetime purchase. Prices, billing period, and any free-trial terms are shown at the point of purchase and may vary by region and over time.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                The free plan includes a limited number of saved places (currently 10 per account, plus any bonus slots earned through the referral program); VoyZa Pro removes this cap. We may adjust the free allowance from time to time.
+                The free plan includes a limited number of saved places (currently 10 per account, plus any bonus slots earned through the referral program) and one copy of a shared trip; VoyZa Pro removes both limits. We may adjust the free allowance from time to time. Whether you qualify for a free trial is decided by the store; when a trial starts while you are signed in, we record a device identifier to detect repeated trials and referral abuse (see the Privacy Policy).
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Paid plans may include:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Unlimited locations</li>
-                <li>Ad-free experience</li>
-                <li>Offline access</li>
-                <li>Route optimization</li>
-                <li>Collaboration features</li>
+                <li>Unlimited saved places</li>
+
+                <li>Applying Auto-plan proposals to your trip</li>
+
+                <li>Unlimited copies of shared trips (the free plan includes one)</li>
               </ul>
               <p className="text-gray-700 leading-relaxed">
                 Features may change over time.
@@ -127,6 +127,34 @@ export default function TermsPage() {
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.3 Restore Purchases</h3>
               <p className="text-gray-700 leading-relaxed">
                 Users may restore purchases using the "Restore Purchases" option, subject to App Store or Google Play policies.
+              </p>
+
+
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.4 Referral program</h3>
+              <p className="text-gray-700 leading-relaxed">You can invite friends with your referral link or code. A person who signs up with your code, or who joins a trip you invited them to by email, may receive a promotional period of VoyZa Pro (currently 30 days); you receive a small instant benefit (currently 2 additional free place slots per referred sign-up, up to 10) and a promotional period of your own (currently 30 days) when they go on to start a paid subscription — a one-time Lifetime purchase does not count. A code can be redeemed once per account, within 14 days of creating the account, and only with a verified email address. Rewards are capped at 12 rewarded referrals per 12-month period, are granted as promotional access with no cash value, and are not transferable; if you already have a paid subscription, your reward is applied when the current period ends. Self-referrals, fake or duplicate accounts, referring your own devices or accounts, and automated or deceptive activity are prohibited; we use limited signals, including a device identifier, to detect them, and we may change or end the program or withhold rewards obtained through prohibited activity.</p>
+            </section>
+
+            <section className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">5. Analytics and Advertising</h2>
+              <p className="text-gray-700 leading-relaxed">
+                We use Firebase Analytics and Google Analytics to understand how VoyZa is used so we can improve it. We also advertise VoyZa on other companies' platforms and measure whether that advertising works: where ads measurement is on, the App tells Google and Meta (Facebook and Instagram) when one of our ads leads to an install, a trial, or a subscription, using your device's advertising identifier where you have allowed it.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                VoyZa does not display third-party advertising inside the App, and we never send advertisers your name, email address, trips, saved places, or location.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                These are two separate choices, each with its own switch in the App at Settings → Preferences:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li><span className="font-semibold">Usage analytics</span> — how the App is used, so we can improve it.</li>
+                <li><span className="font-semibold">Ads measurement</span> — telling Google and Meta when one of our ads has worked.</li>
+              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                For users in the EEA, the UK, and Switzerland, both stay off until you opt in. Elsewhere they are on by default — ads measurement only after the App has shown you a notice — and you can switch either off at any time. On iOS, the App also asks through Apple's tracking prompt before it uses your device's advertising identifier; if you allow it, that is "tracking" as Apple defines it, and you can change your answer in iOS Settings → Privacy &amp; Security → Tracking. On Android, you can reset or delete your Advertising ID in your device settings (Settings → Google → Ads).
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Full details, including exactly what each company receives, are in our{' '}
+                <Link href="/privacy" className="text-primary-600 hover:text-primary-700 underline">Privacy Policy</Link>.
               </p>
             </section>
 
@@ -159,10 +187,11 @@ export default function TermsPage() {
             <section className="space-y-6">
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">8. Data and Privacy</h2>
               <p className="text-gray-700 leading-relaxed">
-                Your use of VoyZa is also governed by our Privacy Policy, which explains how we collect, use, and store your data.
+                Your use of VoyZa is also governed by our{' '}
+                <Link href="/privacy" className="text-primary-600 hover:text-primary-700 underline">Privacy Policy</Link>, which explains what we collect, how we use and share it, the choices you have, and how to exercise your rights.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                VoyZa collects crash reports, diagnostic information, and app performance data to improve stability and performance. This information is shared with third-party providers such as Firebase or Sentry and does not include personal user data.
+                VoyZa collects performance and stability diagnostics to keep the App working well. This information is processed by Firebase (Google). The Privacy Policy lists every provider we rely on and what each one receives.
               </p>
             </section>
 
@@ -207,6 +236,9 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">12. Changes to These Terms</h2>
               <p className="text-gray-700 leading-relaxed">
                 We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the updated Terms.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                This does not apply to data processing that needs your consent. Where our Privacy Policy says we will ask for your consent — for example, before new analytics or advertising measurement — we ask for it separately, and continued use of the App is never treated as that consent.
               </p>
             </section>
 
