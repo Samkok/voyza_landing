@@ -7,7 +7,9 @@
       "namespace": "android_app",
       "package_name": "com.superiordev.voyza",
       "sha256_cert_fingerprints": [
-        "C2:89:96:FE:BA:DF:71:08:8D:F2:AB:A9:22:BA:60:09:F3:11:10:8F:94:BF:6A:88:C6:81:EE:FA:9F:7F:AE:AA"
+        "C2:89:96:FE:BA:DF:71:08:8D:F2:AB:A9:22:BA:60:09:F3:11:10:8F:94:BF:6A:88:C6:81:EE:FA:9F:7F:AE:AA",
+        "B4:13:63:6F:FA:EC:3B:C6:00:57:CE:3B:C9:4C:15:DF:09:77:A7:4C:2F:4C:C5:CE:23:A2:97:2D:A0:DA:55:BC",
+        "61:4E:05:AE:19:8A:08:89:E4:3F:E7:0D:95:02:2F:88:38:DB:8A:67:DC:89:A1:8D:1D:49:0D:5D:3A:39:F5:19"
       ]
     }
   }
