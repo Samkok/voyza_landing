@@ -73,10 +73,10 @@ export default function PrivacyPage() {
             VoyZa Privacy Policy
           </h1>
           <p className="text-gray-600 text-lg">
-            <span className="font-semibold">Last updated:</span> October 6, 2026
+            <span className="font-semibold">Last updated:</span> October 8, 2026
           </p>
           <p className="text-gray-600 mb-12 text-lg">
-            <span className="font-semibold">Effective date:</span> October 6, 2026
+            <span className="font-semibold">Effective date:</span> October 8, 2026
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
                       <td className={td}><strong className={strong}>Account &amp; identity</strong></td>
                       <td className={td}>Email address and password (the password is used only to authenticate you and is stored hashed by Supabase); your VoyZa user ID; and, if you add them on the Profile screen, your first and last name. The App does not ask for a phone number, photo, date of birth or address.</td>
                       <td className={td}>You, at sign-up / in your profile</td>
-                      <td className={td}>Supabase (authentication + profile database; password authentication is handled by Supabase). Your email, and your name if you have added it, are shared with RevenueCat as subscriber attributes. If you choose "Remember me", your email is kept on your device, as is a short list of addresses you have signed in with, to fill the sign-in form.</td>
+                      <td className={td}>Supabase (authentication + profile database; password authentication is handled by Supabase). Your name, if you have added it, is shared with RevenueCat as a subscriber attribute; your email address is not (versions of the App before October 2026 stored it there, and the current version removes it when you next sign in). If you choose "Remember me", your email is kept on your device, as is a short list of addresses you have signed in with, to fill the sign-in form.</td>
                     </tr>
                     <tr>
                       <td className={td}><strong className={strong}>Trip &amp; location content</strong></td>
@@ -266,7 +266,7 @@ export default function PrivacyPage() {
                       <td className={td}>Taking steps at your request / performance of a contract — Art. 6(1)(b); and legitimate interests in running a referral program and connecting invited users — Art. 6(1)(f). For the email of a person who is not yet a user, we rely on our legitimate interest in delivering the invitation you asked us to send, balanced against their interests through data minimization and short retention (deleted on sign-up or after 30 days).</td>
                     </tr>
                     <tr>
-                      <td className={td}>Process subscriptions, trials, restores, and entitlements; share your email (and name, if added) with RevenueCat as subscriber attributes to operate billing</td>
+                      <td className={td}>Process subscriptions, trials, restores, and entitlements; share your name (if added) with RevenueCat as a subscriber attribute to operate billing</td>
                       <td className={td}>Purchases &amp; subscriptions; account &amp; identity</td>
                       <td className={td}>Performance of a contract — Art. 6(1)(b); and legitimate interests in fraud-resistant billing and account linkage — Art. 6(1)(f)</td>
                     </tr>
@@ -384,12 +384,15 @@ export default function PrivacyPage() {
               <p className={p}>Where ads measurement is on, Meta's SDK inside the App sends Meta:</p>
               <ul className={ul}>
                 <li>that the App was <strong className={strong}>installed</strong> and <strong className={strong}>opened</strong>, and how long each session lasted;</li>
-                <li>that you <strong className={strong}>signed up</strong> (and that you did so by email — never the address itself), <strong className={strong}>created a trip</strong>, <strong className={strong}>started a trial</strong> or <strong className={strong}>made a purchase</strong> — for a trial, which plan; for a purchase, the plan, price and currency;</li>
+                <li>that you <strong className={strong}>signed up</strong> (and that you did so by email — never the address itself) and <strong className={strong}>created a trip</strong>;</li>
                 <li>that you <strong className={strong}>optimized a route</strong> — reported once per installation, the first time it happens while ads measurement is on, and only the fact that it happened: never the route itself, its places or the number of stops;</li>
                 <li>an install-level identifier created by Meta's SDK, and your device's advertising identifier where the conditions above are met;</li>
                 <li>on iOS, if you open the App from one of our Meta ads, the link from that ad, so that Meta can credit the ad — never a trip link or any other link the App is opened with;</li>
                 <li>basic device and app information (such as device model, operating-system version, App version, language, time zone, mobile carrier, screen size and storage capacity) and, as with any internet request, your IP address.</li>
               </ul>
+              <p className={p}>
+                Where ads measurement is on, our subscription provider RevenueCat also reports to Meta, directly from its servers and including when the App is closed, that you <strong className={strong}>started a trial</strong>, that a trial <strong className={strong}>converted</strong> to a paid plan, that you <strong className={strong}>made a purchase</strong>, and each <strong className={strong}>renewal</strong> — with the plan, price and currency. With those events RevenueCat forwards Meta's install identifier, your device's advertising identifier (under the same conditions as above) and the IP address recorded with the purchase, so that Meta can match the purchase to an ad. RevenueCat holds no email address or phone number for you, so none is forwarded.
+              </p>
               <p className={p}>
                 <strong className={strong}>We never send Meta your name, email address, phone number, VoyZa account ID, trips, saved places, routes, or location.</strong> We do not upload contact lists to Meta.
               </p>
@@ -471,7 +474,7 @@ export default function PrivacyPage() {
                       <td className={td}><strong className={strong}>RevenueCat</strong></td>
                       <td className={td}>Processor</td>
                       <td className={td}>Subscription and in-app purchase management, paywall, restore</td>
-                      <td className={td}>App user ID, email and, if you added it to your profile, your name; purchase/receipt and entitlement data, attribution metadata (Apple Search Ads token on iOS + Firebase app-instance ID linkage)</td>
+                      <td className={td}>App user ID and, if you added it to your profile, your name; purchase/receipt and entitlement data; attribution metadata (Apple Search Ads token on iOS; Firebase app-instance ID linkage; and, where ads measurement is on, Meta's install identifier and the advertising identifier, which RevenueCat forwards to Meta with trial and purchase events)</td>
                       <td className={td}><Ext href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</Ext></td>
                     </tr>
                     <tr>
@@ -534,7 +537,7 @@ export default function PrivacyPage() {
                       <td className={td}><strong className={strong}>Meta Platforms</strong> (Meta Platforms Ireland Limited for EEA/UK/CH users; Meta Platforms, Inc. elsewhere)</td>
                       <td className={td}>Joint controller with us for the collection and transmission of event data through Meta's SDK; independent controller for its own subsequent use. Service provider/processor where Limited Data Use applies.</td>
                       <td className={td}>App-install campaign delivery and conversion measurement</td>
-                      <td className={td}>Install, open, sign-up, trip-created, first-route-optimized, trial and purchase events; Meta's install identifier; Advertising ID (Android); IDFA (iOS, only with tracking permission); the ad link that opened the App (iOS); device/app information; IP address</td>
+                      <td className={td}>Install, open, sign-up, trip-created and first-route-optimized events from the App; trial, purchase and renewal events reported by RevenueCat; Meta's install identifier; Advertising ID (Android); IDFA (iOS, only with tracking permission); the ad link that opened the App (iOS); device/app information; IP address</td>
                       <td className={td}><Ext href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</Ext>, <Ext href="https://www.facebook.com/legal/terms/businesstools">facebook.com/legal/terms/businesstools</Ext> and <Ext href="https://www.facebook.com/legal/controller_addendum">facebook.com/legal/controller_addendum</Ext></td>
                     </tr>
                   </tbody>
@@ -653,7 +656,7 @@ export default function PrivacyPage() {
                 <li>clear VoyZa data stored locally on your device.</li>
               </ul>
               <p className={p}>
-                <strong className={strong}>Retained after deletion:</strong> To enforce our one-free-trial-per-device limit and prevent referral-reward abuse, the device identifier in our abuse-prevention registry (<Code>trial_devices</Code>) is retained after account deletion — de-linked from your account — for the period stated in Section 10. See Sections 2 and 10. Some other information may be retained where we are legally required to keep it (for example, transaction records for tax purposes) or in backups for a limited period before being overwritten. Content you previously shared with collaborators, copied by others from a public trip, or exported (for example, via CSV or PDF) may remain with those recipients. Rate-limit and send logs that reference only your former user ID, never your email, may remain. RevenueCat keeps its own customer record (app user ID, email and name) and the stores keep their transaction records; deleting your VoyZa account does not cancel a store subscription — cancel it in your App Store or Google Play account.
+                <strong className={strong}>Retained after deletion:</strong> To enforce our one-free-trial-per-device limit and prevent referral-reward abuse, the device identifier in our abuse-prevention registry (<Code>trial_devices</Code>) is retained after account deletion — de-linked from your account — for the period stated in Section 10. See Sections 2 and 10. Some other information may be retained where we are legally required to keep it (for example, transaction records for tax purposes) or in backups for a limited period before being overwritten. Content you previously shared with collaborators, copied by others from a public trip, or exported (for example, via CSV or PDF) may remain with those recipients. Rate-limit and send logs that reference only your former user ID, never your email, may remain. RevenueCat keeps its own customer record (app user ID and name, plus the email address if a version of the App before October 2026 stored it) and the stores keep their transaction records; deleting your VoyZa account does not cancel a store subscription — cancel it in your App Store or Google Play account.
               </p>
               <p className={p}>
                 <strong className={strong}>Deleting without the App.</strong> If you cannot access the App, you can request account and data deletion via our web route at <Ext href="https://voyza.xtremon.com/#how-can-i-delete-my-voyza-account">https://voyza.xtremon.com/#how-can-i-delete-my-voyza-account</Ext>, or by emailing <Mail />. This web route is also referenced in our Google Play and App Store data-handling declarations.
