@@ -138,7 +138,7 @@ export default function PrivacyPage() {
                       <td className={td}><strong className={strong}>Account &amp; identity</strong></td>
                       <td className={td}>Email address and password (the password is used only to authenticate you and is stored hashed by Supabase); your VoyZa user ID; and, if you add them on the Profile screen, your first and last name. The App does not ask for a phone number, photo, date of birth or address.</td>
                       <td className={td}>You, at sign-up / in your profile</td>
-                      <td className={td}>Supabase (authentication + profile database; password authentication is handled by Supabase). Your name, if you have added it, is shared with RevenueCat as a subscriber attribute; your email address is not (versions of the App before October 2026 stored it there, and the current version removes it when you next sign in). If you choose "Remember me", your email is kept on your device, as is a short list of addresses you have signed in with, to fill the sign-in form.</td>
+                      <td className={td}>Supabase (authentication + profile database; password authentication is handled by Supabase). Your name, if you have added it, is shared with RevenueCat as a subscriber attribute; your email address is not (versions of the App before October 2026 stored it there, and the current version removes it the next time you open the App while signed in). If you choose "Remember me", your email is kept on your device, as is a short list of addresses you have signed in with, to fill the sign-in form.</td>
                     </tr>
                     <tr>
                       <td className={td}><strong className={strong}>Trip &amp; location content</strong></td>
