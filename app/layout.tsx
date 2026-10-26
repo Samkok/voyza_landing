@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description: POSITIONING + ' Save places, tap Optimize, see more and walk less. Free to start on iPhone and Android.',
   keywords: ['trip route planner', 'itinerary planner', 'multi-stop route', 'route optimization', 'day trip planner', 'multi-day itinerary', 'group trip planner', 'travel app'],
   alternates: { canonical: '/' },
+  // Google Search Console ownership (URL-prefix property https://voyza.xtremon.com).
+  verification: { google: 'weZZThLbWgm1TQucYHJSA05675ckknXWjXEu6uRQK2g' },
   openGraph: {
     title: 'VoyZa: Trip Route Planner',
     description: POSITIONING,

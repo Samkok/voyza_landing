@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/google5ea846352ddf5753.html",
+      "destination": "/google5ea846352ddf5753"
+    },
+    {
       "source": "/r/:code",
       "destination": "/r"
     },
