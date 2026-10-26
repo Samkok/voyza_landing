@@ -112,7 +112,7 @@ export default function FAQ() {
     {
       question: 'What is VoyZa?',
       answer:
-        "VoyZa is a smart trip planner that helps you organize multiple locations, visualize them on a map, optimize your travel route, and collaborate with others on shared trips. It's designed for solo travelers, friends, families, or groups planning complex trips.",
+        "VoyZa is a trip route planner for iPhone and Android. It turns the places you save into the smartest route for each day of your trip, spreads them across the days, shows opening hours on the map, and follows along once you are there. It\'s for solo travelers, couples, families and groups with more places than fit in a day.",
     },
     {
       question: 'Do I need to create an account to use VoyZa?',
@@ -122,28 +122,22 @@ export default function FAQ() {
     {
       question: 'Can I collaborate with friends on a trip?',
       answer:
-        'Yes. VoyZa Pro lets you invite others to a trip, assign permissions (read-only or write access), and update locations in real-time. One person must be the trip owner and have an active VoyZa Pro plan; collaborators join for free.',
+        'Yes, on the free plan. Invite others to a trip by email as editors or viewers and update places in real time. Everyone needs a free account; nobody needs VoyZa Pro to plan together.',
     },
     {
       question: 'Can anonymous users collaborate?',
       answer:
-        'No. Collaboration requires an authenticated account and a Pro subscription for the trip owner. Anonymous users can only plan solo trips on their device.',
+        'No. Planning together needs a free account on both sides, so the trip can sync between phones. Without an account you plan solo and your trips stay on your device.',
     },
     {
       question: 'What is included in VoyZa Pro?',
-      answer: `Unlimited locations
-
-Ad-free experience
-
-Offline maps
-
-Route optimization
+      answer: `Unlimited saved places (the free plan has 10, plus any referral bonus)
 
 Auto-plan — apply a day-by-day plan across your whole trip (previewing a plan is free)
 
-Trip collaboration — invite others, assign permissions, and sync trips in real-time
+Copy more than one trip that was shared with you
 
-VoyZa Pro is a single plan with everything included. You can subscribe weekly (Trip Pass), monthly, or yearly, or buy Lifetime access with a one-time payment. Current prices and any free-trial offer are shown in the app before you confirm.`,
+Route optimization, opening hours, sharing and planning together are free for everyone. VoyZa Pro is a single plan with everything included. You can subscribe weekly (Trip Pass), monthly, or yearly, or buy Lifetime access with a one-time payment. Current prices and any free-trial offer are shown in the app before you confirm.`,
     },
     {
       question: 'How does payment and subscription work?',
@@ -158,7 +152,7 @@ VoyZa Pro is a single plan with everything included. You can subscribe weekly (T
     {
       question: 'What happens if my subscription expires?',
       answer:
-        'You will lose access to Pro features, unlimited locations, offline maps, and collaboration privileges. Trips you created remain visible, but some actions (adding new locations, inviting collaborators, route optimization) will be restricted.',
+        'You go back to the free plan: your trips and places stay, but you cannot add places beyond the free allowance, apply new Auto-plan proposals, or copy further shared trips until you subscribe again.',
     },
     {
       question: 'Is my data safe?',

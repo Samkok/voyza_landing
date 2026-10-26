@@ -16,7 +16,7 @@ export default function Hero() {
               Plan complex trips without the chaos
             </h1>
             <p className="text-xl sm:text-2xl text-gray-700 max-w-2xl mx-auto lg:mx-0 font-medium">
-              VoyZa helps you visualize, optimize, and collaborate on trips with multiple locations.
+              VoyZa turns the places you save into the smartest route for each day of your trip. Save places, tap Optimize, see more and walk less.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
