@@ -58,6 +58,49 @@ export default function HowItWorksPage() {
       lead={POSITIONING}
       updated="2026-10-26"
     >
+      <section id="demo" className="mt-2 mb-4">
+        <h2 className={s.h2}>Optimize, in 20 seconds</h2>
+        <p className={s.p}>
+          A day in Paris with 12 saved places: open the day, tap Optimize, choose where the day starts,
+          and VoyZa orders the stops into one route. At the end, one leg is switched from driving to
+          transit and the total updates.
+        </p>
+        <div className="flex justify-center">
+          <video
+            className="w-full max-w-[320px] rounded-[28px] shadow-xl border border-gray-200 bg-black"
+            controls
+            playsInline
+            muted
+            preload="metadata"
+            poster="/optimize-demo-poster.jpg"
+            width={720}
+            height={1280}
+            aria-label="VoyZa optimizing a day in Paris: twelve saved places reordered into one route"
+          >
+            <source src="/optimize-demo.mp4" type="video/mp4" />
+            Your browser cannot play this video. <a href="/optimize-demo.mp4" className={s.a}>Download the clip</a>.
+          </video>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'VideoObject',
+              name: 'VoyZa: optimizing a day in Paris in 20 seconds',
+              description:
+                'Twelve saved places in Paris reordered into one route with VoyZa\u2019s Optimize, then one leg switched to transit.',
+              thumbnailUrl: ['https://voyza.xtremon.com/optimize-demo-poster.jpg'],
+              contentUrl: 'https://voyza.xtremon.com/optimize-demo.mp4',
+              uploadDate: '2026-10-26',
+              duration: 'PT20S',
+              width: 720,
+              height: 1280,
+            }),
+          }}
+        />
+      </section>
+
       <h2 className={s.h2}>What VoyZa does</h2>
       <p className={s.p}>
         VoyZa is a trip route planner for iPhone and Android. You save the places you want to visit in a city
