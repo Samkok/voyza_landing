@@ -4,7 +4,7 @@ import InfoPage, { FaqSection, styles as s, type Faq } from '@/components/InfoPa
 export const metadata: Metadata = {
   title: 'Plan a group trip together on one map',
   description:
-    'How to plan a trip with friends or family without a 200-message chat: one shared map, one owner, everyone adds places, the route is optimized once. Free in the VoyZa app.',
+    'Plan a trip with friends without a 200-message chat: one shared map, one owner, everyone adds places, the route is optimized once. Free in VoyZa.',
   alternates: { canonical: '/plan/group-trip' },
 }
 

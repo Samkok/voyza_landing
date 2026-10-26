@@ -4,7 +4,7 @@ import InfoPage, { FaqSection, styles as s, type Faq } from '@/components/InfoPa
 export const metadata: Metadata = {
   title: 'Plan a multi-day city itinerary in the right order',
   description:
-    'How to turn a long list of places into three or more days that make sense: group by area, order each day by route, check opening hours, and keep a buffer. Done by hand or with the VoyZa app.',
+    'Turn a long list of places into days that make sense: group by area, order each day as a route, check opening hours, keep a buffer. By hand or with VoyZa.',
   alternates: { canonical: '/plan/multi-day-itinerary' },
 }
 

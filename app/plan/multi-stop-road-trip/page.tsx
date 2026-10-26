@@ -4,7 +4,7 @@ import InfoPage, { FaqSection, styles as s, type Faq } from '@/components/InfoPa
 export const metadata: Metadata = {
   title: 'Multi-stop road trip planner: put your stops in the best order',
   description:
-    'How to plan a road trip with many stops: fix the anchors, order the rest by route, respect opening hours and daylight, and keep the plan alive on the road. With or without the VoyZa app.',
+    'Plan a road trip with many stops: fix the anchors, order the rest by route, respect opening hours and daylight, keep the plan alive on the road.',
   alternates: { canonical: '/plan/multi-stop-road-trip' },
 }
 

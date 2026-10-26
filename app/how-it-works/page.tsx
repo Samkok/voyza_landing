@@ -4,7 +4,7 @@ import InfoPage, { FaqSection, POSITIONING, styles as s, type Faq } from '@/comp
 export const metadata: Metadata = {
   title: 'How VoyZa works: trip route planner for multi-stop days',
   description:
-    'What VoyZa does, who it is for, how the route optimizer orders your saved places, what is free and what VoyZa Pro adds, and how it differs from map lists and itinerary apps.',
+    'What VoyZa does, who it is for, how Optimize orders your saved places, what is free, what Pro adds, and how it compares to map lists and itinerary apps.',
   alternates: { canonical: '/how-it-works' },
 }
 
