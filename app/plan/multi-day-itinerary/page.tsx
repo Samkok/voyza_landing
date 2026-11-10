@@ -20,7 +20,7 @@ export default function Page() {
     <InfoPage
       title="Plan a multi-day city itinerary in the right order"
       lead="The hard part of a 3-day or 5-day trip is not finding places. It is deciding which day each one belongs on and in what order, so you are not crossing the city twice."
-      updated="2026-10-26"
+      updated="2026-11-10"
     >
       <h2 className={s.h2}>The method, whether or not you use an app</h2>
       <ol className={s.ol}>
@@ -40,8 +40,8 @@ export default function Page() {
         a slow morning.
       </p>
       <p className={s.p}>
-        The first 10 places are free with no account. Applying an Auto-plan proposal and saving more than 10
-        places need VoyZa Pro, shown in the app with current prices.
+        Creating a trip and previewing an Auto-plan proposal are free. Adding places and applying a proposal
+        need VoyZa Pro, shown in the app with current prices; the yearly plan starts with a free trial.
       </p>
 
       <h2 className={s.h2}>Common mistakes</h2>

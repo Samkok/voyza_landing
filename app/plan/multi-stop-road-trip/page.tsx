@@ -20,7 +20,7 @@ export default function Page() {
     <InfoPage
       title="Multi-stop road trip planner: put your stops in the best order"
       lead="Ten stops can be a great day or a wasted one. The difference is the order, and the order is the one thing most map apps will not do for you."
-      updated="2026-10-26"
+      updated="2026-11-10"
     >
       <h2 className={s.h2}>The method</h2>
       <ol className={s.ol}>
@@ -40,7 +40,8 @@ export default function Page() {
         with changes appearing live.
       </p>
       <p className={s.p}>
-        Up to 10 places are free with no account; VoyZa Pro removes the cap.
+        Creating trips and trying the sample trip are free with no account. Adding your own places needs
+        VoyZa Pro, and the yearly plan starts with a free trial.
       </p>
 
       <FaqSection faqs={faqs} />

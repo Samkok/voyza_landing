@@ -29,7 +29,7 @@ export default function TermsPage() {
             Terms and Conditions
           </h1>
           <p className="text-gray-600 mb-12 text-lg">
-            Last updated: November 9, 2026
+            Last updated: November 10, 2026
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -111,16 +111,16 @@ export default function TermsPage() {
               
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">5.1 Free and Paid Plans</h3>
               <p className="text-gray-700 leading-relaxed">
-                VoyZa offers a free tier and paid access to premium features ("VoyZa Pro"). VoyZa Pro is available as an auto-renewing subscription — weekly ("Trip Pass"), monthly, or yearly — or as a one-time Lifetime purchase. Prices, billing period, and any free-trial terms are shown at the point of purchase and may vary by region and over time.
+                VoyZa offers a free tier and paid access to premium features ("VoyZa Pro"). VoyZa Pro is available as an auto-renewing subscription — weekly ("Trip Pass"), monthly, or yearly — or as a one-time Lifetime purchase. Prices, billing period, and any free-trial terms are shown at the point of purchase and may vary by region and over time. A free trial, where the store offers you one, is available on the yearly plan only (currently 7 days); the weekly, monthly and Lifetime options start with payment.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                The free plan includes a limited number of saved places (currently 10 per account, plus any bonus slots earned through the referral program) and one copy of a shared trip; VoyZa Pro removes both limits. We may adjust the free allowance from time to time. Whether you qualify for a free trial is decided by the store; when a trial starts while you are signed in, we record a device identifier to detect repeated trials and referral abuse (see the Privacy Policy).
+                On the free plan you can create trips, explore the sample trip, view and edit trips you are invited to, optimize routes for the places already in a trip, share, and make one copy of a shared trip. Adding new places — to your own trip or to one shared with you — needs VoyZa Pro, as do copying a place to another day, duplicating a trip with its places, applying an Auto-plan proposal, and copying more than one shared trip. This follows the person who adds the place, not the owner of the trip. Places you have already saved stay in your trips. We may change what the free plan includes from time to time. Whether you qualify for the free trial is decided by the store; when a trial starts while you are signed in, we record a device identifier to detect repeated trials and referral abuse (see the Privacy Policy).
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Paid plans may include:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                <li>Unlimited saved places</li>
+                <li>Adding places to your trips (search, nearby, or a pasted Maps link)</li>
 
                 <li>Applying Auto-plan proposals to your trip</li>
 
@@ -144,7 +144,7 @@ export default function TermsPage() {
 
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">5.4 Referral program</h3>
-              <p className="text-gray-700 leading-relaxed">You can invite friends with your referral link or code. A person who signs up with your code, or who joins a trip you invited them to by email, may receive a promotional period of VoyZa Pro (currently 30 days); you receive a small instant benefit (currently 2 additional free place slots per referred sign-up, up to 10) and a promotional period of your own (currently 30 days) when they go on to start a paid subscription — a one-time Lifetime purchase does not count. A code can be redeemed once per account, within 14 days of creating the account, and only with a verified email address. Rewards are capped at 12 rewarded referrals per 12-month period, are granted as promotional access with no cash value, and are not transferable; if you already have a paid subscription, your reward is applied when the current period ends. Self-referrals, fake or duplicate accounts, referring your own devices or accounts, and automated or deceptive activity are prohibited; we use limited signals, including a device identifier, to detect them, and we may change or end the program or withhold rewards obtained through prohibited activity.</p>
+              <p className="text-gray-700 leading-relaxed">You can invite friends with your referral link or code. A person who signs up with your code, or who joins a trip you invited them to by email, may receive a promotional period of VoyZa Pro (currently 30 days); you receive a promotional period of your own (currently 30 days) when they go on to start a paid subscription — a one-time Lifetime purchase does not count. A code can be redeemed once per account, within 14 days of creating the account, and only with a verified email address. Rewards are capped at 12 rewarded referrals per 12-month period, are granted as promotional access with no cash value, and are not transferable; if you already have a paid subscription, your reward is applied when the current period ends. Self-referrals, fake or duplicate accounts, referring your own devices or accounts, and automated or deceptive activity are prohibited; we use limited signals, including a device identifier, to detect them, and we may change or end the program or withhold rewards obtained through prohibited activity. Bonus place slots granted under an earlier version of the program no longer have any effect, because adding places is now part of VoyZa Pro.</p>
             </section>
 
             <section className="space-y-6">

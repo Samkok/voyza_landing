@@ -23,7 +23,7 @@ const faqs: Faq[] = [
   },
   {
     q: 'Is VoyZa free?',
-    a: 'Yes to start. Without an account you can save up to 10 places, optimize the route, plan days, and share a route card. VoyZa Pro removes the 10-place cap, lets you apply Auto-plan proposals, and lets you copy more than one shared trip. Pro is sold as a weekly Trip Pass, monthly, yearly, or a one-time Lifetime purchase; prices and any free trial are shown in the app before you confirm.',
+    a: 'Free to start, with no account: create trips, explore the sample trip with route optimization, join trips friends share with you, and copy one shared trip. Adding your own places needs VoyZa Pro, which also lets you apply Auto-plan proposals and copy more than one shared trip. Pro is sold as a weekly Trip Pass, monthly, yearly, or a one-time Lifetime purchase; the yearly plan starts with a 7-day free trial where the store offers it, and prices are shown in the app before you confirm.',
   },
   {
     q: 'Do I need an account?',
@@ -31,7 +31,7 @@ const faqs: Faq[] = [
   },
   {
     q: 'Can I plan a trip with friends?',
-    a: 'Yes, on the free plan. Invite people to a trip by email as editors or viewers; everyone sees the same map and changes appear live. You can also share a trip as a link that opens without the app, or as a code that lets someone copy the trip into their own VoyZa.',
+    a: 'Yes, on the free plan. Invite people to a trip by email as editors or viewers; everyone sees the same map and changes appear live. Adding new places needs VoyZa Pro for the person adding them. You can also share a trip as a link that opens without the app, or as a code that lets someone copy the trip into their own VoyZa.',
   },
   {
     q: 'Does VoyZa work offline?',
@@ -56,7 +56,7 @@ export default function HowItWorksPage() {
     <InfoPage
       title="How VoyZa works"
       lead={POSITIONING}
-      updated="2026-10-26"
+      updated="2026-11-10"
     >
       <section id="demo" className="mt-2 mb-4">
         <h2 className={s.h2}>Optimize, in 20 seconds</h2>
@@ -133,15 +133,16 @@ export default function HowItWorksPage() {
 
       <h2 className={s.h2}>What is free and what Pro adds</h2>
       <p className={s.p}>
-        Free, with no account: 10 saved places, route optimization, day planning, opening hours, sharing, and
-        one copy of a trip shared with you. A free account adds sync across devices and planning together with
-        friends.
+        Free, with no account: creating trips, the sample trip, route optimization and day planning for the
+        places in a trip, opening hours, sharing, and one copy of a trip shared with you. A free account adds
+        sync across devices and planning together with friends.
       </p>
       <p className={s.p}>
-        VoyZa Pro removes the 10-place cap, lets you apply Auto-plan proposals across the whole trip, and lets
-        you copy more than one shared trip. It is sold through the App Store and Google Play as a weekly Trip
-        Pass, monthly, yearly, or a one-time Lifetime purchase. Prices and any free trial are shown in the app
-        before you confirm, and subscriptions are cancelled through your store account.
+        VoyZa Pro lets you add your own places, apply Auto-plan proposals across the whole trip, and copy more
+        than one shared trip. It is sold through the App Store and Google Play as a weekly Trip Pass, monthly,
+        yearly, or a one-time Lifetime purchase. The yearly plan starts with a 7-day free trial where the store
+        offers it; prices are shown in the app before you confirm, and subscriptions are cancelled through
+        your store account.
       </p>
 
       <h2 className={s.h2}>How it compares</h2>

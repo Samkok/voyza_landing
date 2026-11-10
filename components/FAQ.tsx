@@ -117,12 +117,12 @@ export default function FAQ() {
     {
       question: 'Do I need to create an account to use VoyZa?',
       answer:
-        'No. You can start using VoyZa as an anonymous user and save locations locally on your device. Creating an account lets you sync trips across devices, access premium features, and collaborate with others.',
+        'No. You can start without one, and your trips stay on your device. Creating an account lets you sync trips across devices and collaborate with others.',
     },
     {
       question: 'Can I collaborate with friends on a trip?',
       answer:
-        'Yes, on the free plan. Invite others to a trip by email as editors or viewers and update places in real time. Everyone needs a free account; nobody needs VoyZa Pro to plan together.',
+        'Yes, on the free plan. Invite others to a trip by email as editors or viewers and see changes in real time. Everyone needs a free account. Viewing and editing a shared trip are free; adding new places needs VoyZa Pro for the person adding them.',
     },
     {
       question: 'Can anonymous users collaborate?',
@@ -131,13 +131,13 @@ export default function FAQ() {
     },
     {
       question: 'What is included in VoyZa Pro?',
-      answer: `Unlimited saved places (the free plan has 10, plus any referral bonus)
+      answer: `Adding places to your trips, as many as you need (creating trips is free)
 
 Auto-plan — apply a day-by-day plan across your whole trip (previewing a plan is free)
 
 Copy more than one trip that was shared with you
 
-Route optimization, opening hours, sharing and planning together are free for everyone. VoyZa Pro is a single plan with everything included. You can subscribe weekly (Trip Pass), monthly, or yearly, or buy Lifetime access with a one-time payment. Current prices and any free-trial offer are shown in the app before you confirm.`,
+Route optimization, opening hours, sharing and planning together are free for everyone. VoyZa Pro is a single plan with everything included. You can subscribe weekly (Trip Pass), monthly, or yearly, or buy Lifetime access with a one-time payment. The yearly plan starts with a 7-day free trial where the store offers it; current prices are shown in the app before you confirm.`,
     },
     {
       question: 'How does payment and subscription work?',
@@ -152,7 +152,7 @@ Route optimization, opening hours, sharing and planning together are free for ev
     {
       question: 'What happens if my subscription expires?',
       answer:
-        'You go back to the free plan: your trips and places stay, but you cannot add places beyond the free allowance, apply new Auto-plan proposals, or copy further shared trips until you subscribe again.',
+        'You go back to the free plan: your trips and places stay, and you can still optimize, share and plan together, but you cannot add new places, apply new Auto-plan proposals, or copy further shared trips until you subscribe again.',
     },
     {
       question: 'Is my data safe?',

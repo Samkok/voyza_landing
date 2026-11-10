@@ -10,7 +10,7 @@ const POSITIONING =
 export const metadata: Metadata = {
   metadataBase: new URL('https://voyza.xtremon.com'),
   title: 'VoyZa: Trip Route Planner',
-  description: POSITIONING + ' Save places, tap Optimize, see more and walk less. Free to start on iPhone and Android.',
+  description: POSITIONING + ' Save places, tap Optimize, see more and walk less. Free to download on iPhone and Android.',
   keywords: ['trip route planner', 'itinerary planner', 'multi-stop route', 'route optimization', 'day trip planner', 'multi-day itinerary', 'group trip planner', 'travel app'],
   alternates: { canonical: '/' },
   // Google Search Console ownership (URL-prefix property https://voyza.xtremon.com).
@@ -42,7 +42,7 @@ const softwareJsonLd = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
-    description: 'Free with 10 saved places; VoyZa Pro (weekly, monthly, yearly or lifetime) removes the cap.',
+    description: 'Free to download: create trips, try the sample trip and plan together. Adding your own places needs VoyZa Pro (weekly, monthly, yearly with a free trial, or lifetime).',
   },
   featureList: [
     'Multi-stop route optimization on real roads',
