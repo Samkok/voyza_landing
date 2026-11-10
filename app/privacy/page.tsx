@@ -73,7 +73,7 @@ export default function PrivacyPage() {
             VoyZa Privacy Policy
           </h1>
           <p className="text-gray-600 text-lg">
-            <span className="font-semibold">Last updated:</span> October 8, 2026
+            <span className="font-semibold">Last updated:</span> November 9, 2026
           </p>
           <p className="text-gray-600 mb-12 text-lg">
             <span className="font-semibold">Effective date:</span> October 8, 2026
@@ -91,10 +91,10 @@ export default function PrivacyPage() {
             <section className="space-y-6">
               <h2 className={h2}>1. Who We Are and How to Contact Us</h2>
               <p className={p}>
-                VoyZa is operated by <strong className={strong}>Heng Kok</strong>, an individual developer (sole trader) based in Phnom Penh, Cambodia, who is the <strong className={strong}>data controller</strong> for the personal information described in this policy. "VoyZa" and "Xtremon" are brand/trading names used by the operator; there is currently no separate registered company, so the responsible legal person is the individual named here.
+                VoyZa is operated by <strong className={strong}>Kok Heng</strong>, an individual developer (sole trader) based in Phnom Penh, Cambodia, who is the <strong className={strong}>data controller</strong> for the personal information described in this policy. "VoyZa" and "Xtremon" are brand/trading names used by the operator; there is currently no separate registered company, so the responsible legal person is the individual named here.
               </p>
               <ul className={ul}>
-                <li><strong className={strong}>Controller:</strong> Heng Kok (individual / sole trader, trading as VoyZa)</li>
+                <li><strong className={strong}>Controller:</strong> Kok Heng (individual / sole trader, trading as VoyZa)</li>
                 <li><strong className={strong}>Postal address:</strong> available on request — email us and we will provide it</li>
                 {/* Business address, not published: Chipmong 598, Street P33, Home 6, Phnom Penh, Cambodia */}
                 <li><strong className={strong}>Country of establishment:</strong> Cambodia</li>
@@ -779,7 +779,7 @@ export default function PrivacyPage() {
               </p>
               <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-xl p-6 border-2 border-primary-200 mt-4">
                 <p className="text-gray-900 font-semibold mb-1">Controller:</p>
-                <p className="text-gray-700 mb-4">Heng Kok (individual, trading as VoyZa), Phnom Penh, Cambodia — postal address on request</p>
+                <p className="text-gray-700 mb-4">Kok Heng (individual, trading as VoyZa), Phnom Penh, Cambodia — postal address on request</p>
                 <p className="text-gray-900 font-semibold mb-1">Email:</p>
                 <a
                   href="mailto:hengsamkok76@gmail.com"

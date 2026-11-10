@@ -29,7 +29,7 @@ export default function TermsPage() {
             Terms and Conditions
           </h1>
           <p className="text-gray-600 mb-12 text-lg">
-            Last updated: October 6, 2026
+            Last updated: November 9, 2026
           </p>
 
           <div className="prose prose-lg max-w-none space-y-8">
@@ -48,9 +48,22 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">2. Accounts and Usage</h2>
+              <h2 id="offered-by" className="text-2xl font-bold text-gray-900 mt-12 mb-4">2. Who Offers VoyZa</h2>
+              <p className="text-gray-700 leading-relaxed">
+                VoyZa is offered by Kok Heng, an individual developer (sole trader) based in Phnom Penh, Cambodia, trading as VoyZa. "VoyZa" and "Xtremon" are trading names; there is no separate registered company, so Kok Heng is the person you contract with when you use the App or buy VoyZa Pro.
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Trader: Kok Heng (sole trader, trading as VoyZa), Phnom Penh, Cambodia</li>
+                <li>Email: <a href="mailto:hengsamkok76@gmail.com" className="text-primary-600 hover:text-primary-700 underline">hengsamkok76@gmail.com</a></li>
+                {/* Postal address and phone: pending; swap this line when decided, together with the privacy policy and the in-app Terms. */}
+                <li>Postal address: available on request by email</li>
+              </ul>
+            </section>
+
+            <section className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">3. Accounts and Usage</h2>
               
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.1 Anonymous Use</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">3.1 Anonymous Use</h3>
               <p className="text-gray-700 leading-relaxed">
                 VoyZa allows you to use certain features without creating an account. In anonymous mode:
               </p>
@@ -60,7 +73,7 @@ export default function TermsPage() {
                 <li>Subscriptions purchased anonymously are tied to your App Store or Google Play account.</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2.2 Registered Accounts</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">3.2 Registered Accounts</h3>
               <p className="text-gray-700 leading-relaxed">
                 When you create an account:
               </p>
@@ -72,31 +85,31 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">3. Trips, Locations, and Collaboration</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">4. Trips, Locations, and Collaboration</h2>
               
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">3.1 Trip Ownership</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.1 Trip Ownership</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>The user who creates a trip is considered the trip owner.</li>
                 <li>Trip owners may invite other users with read-only or write access.</li>
                 <li>Trip owners control permissions and access.</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">3.2 Collaborators</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.2 Collaborators</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Collaborators may view or edit trips based on permissions granted.</li>
                 <li>Collaborators do not own the trip and cannot manage subscriptions or permissions unless explicitly allowed.</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">3.3 Data Responsibility</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.3 Data Responsibility</h3>
               <p className="text-gray-700 leading-relaxed">
                 You are responsible for the accuracy of locations, routes, and trip data you add. VoyZa does not guarantee correctness of routes, distances, or travel feasibility.
               </p>
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">4. Subscriptions and Payments</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">5. Subscriptions and Payments</h2>
               
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.1 Free and Paid Plans</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">5.1 Free and Paid Plans</h3>
               <p className="text-gray-700 leading-relaxed">
                 VoyZa offers a free tier and paid access to premium features ("VoyZa Pro"). VoyZa Pro is available as an auto-renewing subscription — weekly ("Trip Pass"), monthly, or yearly — or as a one-time Lifetime purchase. Prices, billing period, and any free-trial terms are shown at the point of purchase and may vary by region and over time.
               </p>
@@ -117,25 +130,40 @@ export default function TermsPage() {
                 Features may change over time.
               </p>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.2 Billing</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">5.2 Billing</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>Payments are processed through Apple App Store or Google Play.</li>
                 <li>Subscription plans automatically renew unless canceled through your store account; a Lifetime purchase is one-time and does not renew.</li>
-                <li>VoyZa does not manage refunds directly.</li>
+                <li>Refunds go through the store's refund process; section 6 explains your legal rights.</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.3 Restore Purchases</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">5.3 Restore Purchases</h3>
               <p className="text-gray-700 leading-relaxed">
                 Users may restore purchases using the "Restore Purchases" option, subject to App Store or Google Play policies.
               </p>
 
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">4.4 Referral program</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">5.4 Referral program</h3>
               <p className="text-gray-700 leading-relaxed">You can invite friends with your referral link or code. A person who signs up with your code, or who joins a trip you invited them to by email, may receive a promotional period of VoyZa Pro (currently 30 days); you receive a small instant benefit (currently 2 additional free place slots per referred sign-up, up to 10) and a promotional period of your own (currently 30 days) when they go on to start a paid subscription — a one-time Lifetime purchase does not count. A code can be redeemed once per account, within 14 days of creating the account, and only with a verified email address. Rewards are capped at 12 rewarded referrals per 12-month period, are granted as promotional access with no cash value, and are not transferable; if you already have a paid subscription, your reward is applied when the current period ends. Self-referrals, fake or duplicate accounts, referring your own devices or accounts, and automated or deceptive activity are prohibited; we use limited signals, including a device identifier, to detect them, and we may change or end the program or withhold rewards obtained through prohibited activity.</p>
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">5. Analytics and Advertising</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">6. Refunds and Your Right of Withdrawal</h2>
+              <p className="text-gray-700 leading-relaxed">
+                VoyZa Pro is bought through the Apple App Store or Google Play, which takes the payment and issues your receipt. If you live in the European Economic Area or the United Kingdom, you have a legal right to withdraw from a purchase within 14 days without giving a reason.
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li>A subscription starts as soon as you buy it, at your request, so if you withdraw within those 14 days you may be charged a proportionate amount for the days you had access.</li>
+                <li>A Lifetime purchase is digital content delivered immediately: by buying it you ask for immediate delivery and acknowledge that the right of withdrawal ends once it is delivered.</li>
+                <li>To withdraw or ask for a refund, use the store's refund request (the quickest route) or email us at <a href="mailto:hengsamkok76@gmail.com" className="text-primary-600 hover:text-primary-700 underline">hengsamkok76@gmail.com</a> with your store receipt. Where the law gives you a right to a refund we honour it.</li>
+              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                Outside the EEA and the UK, refunds follow the store's refund policy and the law of your country.
+              </p>
+            </section>
+
+            <section className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">7. Analytics and Advertising</h2>
               <p className="text-gray-700 leading-relaxed">
                 We use Firebase Analytics and Google Analytics to understand how VoyZa is used so we can improve it. We also advertise VoyZa on other companies' platforms and measure whether that advertising works: where ads measurement is on, the App tells Google and Meta (Facebook and Instagram) when one of our ads leads to an install, a trial, or a subscription, using your device's advertising identifier where you have allowed it.
               </p>
@@ -159,7 +187,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">6. Acceptable Use</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">8. Acceptable Use</h2>
               <p className="text-gray-700 leading-relaxed">
                 You agree not to:
               </p>
@@ -175,7 +203,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">7. Intellectual Property</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">9. Intellectual Property</h2>
               <p className="text-gray-700 leading-relaxed">
                 VoyZa and all related content, logos, designs, and software are owned by VoyZa or its licensors and are protected by intellectual property laws.
               </p>
@@ -185,7 +213,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">8. Data and Privacy</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">10. Data and Privacy</h2>
               <p className="text-gray-700 leading-relaxed">
                 Your use of VoyZa is also governed by our{' '}
                 <Link href="/privacy" className="text-primary-600 hover:text-primary-700 underline">Privacy Policy</Link>, which explains what we collect, how we use and share it, the choices you have, and how to exercise your rights.
@@ -196,9 +224,16 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">9. Disclaimer</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">11. Your Statutory Rights</h2>
               <p className="text-gray-700 leading-relaxed">
-                VoyZa is provided "as is" and "as available".
+                If you use VoyZa as a consumer, nothing in these Terms limits or excludes any right you have under the mandatory consumer protection law of your country of residence that cannot be excluded by agreement. In particular, if you live in the EEA or the UK, the App and VoyZa Pro must conform to the contract (the legal guarantee of conformity for digital content and digital services), and you are entitled to the remedies that law provides, such as having a fault fixed, a price reduction or ending the contract. Sections 12 and 13 apply only to the extent permitted by that law.
+              </p>
+            </section>
+
+            <section className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">12. Disclaimer</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Subject to section 11, VoyZa is provided "as is" and "as available".
               </p>
               <p className="text-gray-700 leading-relaxed">
                 We do not guarantee:
@@ -214,7 +249,7 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">10. Limitation of Liability</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">13. Limitation of Liability</h2>
               <p className="text-gray-700 leading-relaxed">
                 To the maximum extent permitted by law, VoyZa shall not be liable for:
               </p>
@@ -223,19 +258,25 @@ export default function TermsPage() {
                 <li>Travel delays or disruptions</li>
                 <li>Indirect or consequential damages</li>
               </ul>
+              <p className="text-gray-700 leading-relaxed">
+                Nothing in these Terms excludes or limits our liability for death or personal injury caused by our negligence, for fraud or fraudulent misrepresentation, or for anything else that cannot be excluded or limited by law.
+              </p>
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">11. Termination</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">14. Termination</h2>
               <p className="text-gray-700 leading-relaxed">
                 You may stop using VoyZa at any time. We may suspend or terminate access if you violate these Terms.
               </p>
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">12. Changes to These Terms</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">15. Changes to These Terms</h2>
               <p className="text-gray-700 leading-relaxed">
                 We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the updated Terms.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                If a change materially affects a paid VoyZa Pro plan, we will tell you at least 30 days before it takes effect, in the App or by email, and you may cancel your subscription before then; if you do, the change does not apply to the period you have already paid for.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 This does not apply to data processing that needs your consent. Where our Privacy Policy says we will ask for your consent — for example, before new analytics or advertising measurement — we ask for it separately, and continued use of the App is never treated as that consent.
@@ -243,14 +284,17 @@ export default function TermsPage() {
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">13. Governing Law</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">16. Governing Law and Complaints</h2>
               <p className="text-gray-700 leading-relaxed">
-                These Terms are governed by and construed in accordance with the laws of your applicable jurisdiction, without regard to conflict of law principles.
+                These Terms are governed by the laws of Cambodia, except that if you are a consumer you also benefit from the mandatory consumer protection law of the country where you live, and nothing here takes away your right to bring a claim in your local courts.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                If something goes wrong, email us first at <a href="mailto:hengsamkok76@gmail.com" className="text-primary-600 hover:text-primary-700 underline">hengsamkok76@gmail.com</a>; we aim to reply within 14 days. If you live in the EEA or the UK and we cannot resolve a complaint, you may be able to refer it to an approved alternative dispute resolution body in your country.
               </p>
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">14. Contact</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">17. Contact</h2>
               <p className="text-gray-700 leading-relaxed">
                 If you have questions about these Terms, contact us at:
               </p>
@@ -262,6 +306,8 @@ export default function TermsPage() {
                 >
                   hengsamkok76@gmail.com
                 </a>
+                <p className="text-gray-900 font-semibold mt-4 mb-2">Offered by:</p>
+                <p className="text-gray-700">Kok Heng (sole trader, trading as VoyZa), Phnom Penh, Cambodia — postal address on request</p>
                 <p className="text-gray-900 font-semibold mt-4 mb-2">App Name:</p>
                 <p className="text-gray-700">VoyZa</p>
               </div>
