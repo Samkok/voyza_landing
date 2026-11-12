@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import InfoPage, { FaqSection, styles as s, type Faq } from '@/components/InfoPage'
+import InfoPage, { FaqSection, InApp, RouteSteps, styles as s, type Faq, type Step } from '@/components/InfoPage'
 
 export const metadata: Metadata = {
   title: 'Multi-stop road trip planner: put your stops in the best order',
@@ -15,34 +15,39 @@ const faqs: Faq[] = [
   { q: 'Is this for deliveries or sales visits too?', a: 'The ordering works the same for any list of addresses, and VoyZa is used that way, but it is built for travellers: opening hours, tags like food and sights, and sharing the trip with the people in the car.' },
 ]
 
+const steps: Step[] = [
+  { title: 'Fix the anchors', body: <>Where you sleep each night is fixed. Everything else is movable.</> },
+  { title: 'Put every stop on the map', body: <>Viewpoints, towns, trailheads, the one bakery someone insisted on. Seeing them together is what makes the order obvious.</> },
+  { title: 'Order each day as one loop or one line', body: <>Between the anchors, visit stops in the sequence that keeps the car moving forward. Detours of twenty minutes each add up to a lost afternoon.</> },
+  { title: 'Check hours and daylight', body: <>A viewpoint after dark and a café on its closing day are both wasted stops.</> },
+  { title: 'Expect to drop stops', body: <>Decide in advance which ones are optional, so the day does not fall apart when the first stop runs long.</> },
+]
+
 export default function Page() {
   return (
     <InfoPage
-      title="Multi-stop road trip planner: put your stops in the best order"
+      kicker="Guide · Road trips"
+      title="Multi-stop road trip planner:"
+      titleAccent="put your stops in the best order"
       lead="Ten stops can be a great day or a wasted one. The difference is the order, and the order is the one thing most map apps will not do for you."
       updated="2026-11-10"
     >
       <h2 className={s.h2}>The method</h2>
-      <ol className={s.ol}>
-        <li><span className={s.strong}>Fix the anchors.</span> Where you sleep each night is fixed. Everything else is movable.</li>
-        <li><span className={s.strong}>Put every stop on the map.</span> Viewpoints, towns, trailheads, the one bakery someone insisted on. Seeing them together is what makes the order obvious.</li>
-        <li><span className={s.strong}>Order each day as one loop or one line.</span> Between the anchors, visit stops in the sequence that keeps the car moving forward. Detours of twenty minutes each add up to a lost afternoon.</li>
-        <li><span className={s.strong}>Check hours and daylight.</span> A viewpoint after dark and a café on its closing day are both wasted stops.</li>
-        <li><span className={s.strong}>Expect to drop stops.</span> Decide in advance which ones are optional, so the day does not fall apart when the first stop runs long.</li>
-      </ol>
+      <RouteSteps steps={steps} />
 
-      <h2 className={s.h2}>How VoyZa does it</h2>
-      <p className={s.p}>
-        Save the stops, tag the overnight places as "stay" with the nights they cover, and tap Optimize on each
-        day. VoyZa orders the day\'s stops along real roads and shows how much driving it saved. Pins show whether a stop will be open when you get
-        there. On the road, it routes from where you are to the next stop, asks whether to mark a stop done when
-        you arrive, and carries skipped stops forward to today. Everyone in the car can have the same trip open,
-        with changes appearing live.
-      </p>
-      <p className={s.p}>
-        Creating trips and trying the sample trip are free with no account. Adding your own places needs
-        VoyZa Pro, and the yearly plan starts with a free trial.
-      </p>
+      <InApp>
+        <p className={s.p}>
+          Save the stops, tag the overnight places as "stay" with the nights they cover, and tap Optimize on each
+          day. VoyZa orders the day’s stops along real roads and shows how much driving it saved. Pins show whether a stop will be open when you get
+          there. On the road, it routes from where you are to the next stop, asks whether to mark a stop done when
+          you arrive, and carries skipped stops forward to today. Everyone in the car can have the same trip open,
+          with changes appearing live.
+        </p>
+        <p className={s.p}>
+          Creating trips and trying the sample trip are free with no account. Adding your own places needs
+          VoyZa Pro, and the yearly plan starts with a free trial.
+        </p>
+      </InApp>
 
       <FaqSection faqs={faqs} />
     </InfoPage>

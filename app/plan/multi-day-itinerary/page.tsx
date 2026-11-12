@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import InfoPage, { FaqSection, styles as s, type Faq } from '@/components/InfoPage'
+import InfoPage, { FaqSection, InApp, RouteSteps, styles as s, type Faq, type Step } from '@/components/InfoPage'
 
 export const metadata: Metadata = {
   title: 'Plan a multi-day city itinerary in the right order',
@@ -15,34 +15,39 @@ const faqs: Faq[] = [
   { q: 'Can I plan a 3-day Tokyo or Lisbon itinerary with VoyZa?', a: 'Yes. Save the places, set three days, let Auto-plan propose a day for each place, then tap Optimize on each day. Opening hours are shown on the pins so you can swap a closed museum for a park.' },
 ]
 
+const steps: Step[] = [
+  { title: 'Collect everything first', body: <>Put every place you are considering on one map before you decide anything. Lists hide distances; maps show them.</> },
+  { title: 'Group by area, one area per day', body: <>Clusters on the map become days. A place that sits between two clusters goes on whichever day has room.</> },
+  { title: 'Order each day as a route', body: <>Start near where you sleep or arrive, finish near dinner, and visit the stops in a loop rather than out-and-back. This is where most backtracking is lost or saved.</> },
+  { title: 'Check opening hours against the order', body: <>Markets in the morning, viewpoints near sunset, museums on the day they are open. A good order with one closed door in the middle is a bad day.</> },
+  { title: 'Leave a buffer', body: <>One fewer stop per day than you think you can do. Anything missed moves to the next day.</> },
+]
+
 export default function Page() {
   return (
     <InfoPage
-      title="Plan a multi-day city itinerary in the right order"
+      kicker="Guide · City trips"
+      title="Plan a multi-day city itinerary"
+      titleAccent="in the right order"
       lead="The hard part of a 3-day or 5-day trip is not finding places. It is deciding which day each one belongs on and in what order, so you are not crossing the city twice."
       updated="2026-11-10"
     >
       <h2 className={s.h2}>The method, whether or not you use an app</h2>
-      <ol className={s.ol}>
-        <li><span className={s.strong}>Collect everything first.</span> Put every place you are considering on one map before you decide anything. Lists hide distances; maps show them.</li>
-        <li><span className={s.strong}>Group by area, one area per day.</span> Clusters on the map become days. A place that sits between two clusters goes on whichever day has room.</li>
-        <li><span className={s.strong}>Order each day as a route.</span> Start near where you sleep or arrive, finish near dinner, and visit the stops in a loop rather than out-and-back. This is where most backtracking is lost or saved.</li>
-        <li><span className={s.strong}>Check opening hours against the order.</span> Markets in the morning, viewpoints near sunset, museums on the day they are open. A good order with one closed door in the middle is a bad day.</li>
-        <li><span className={s.strong}>Leave a buffer.</span> One fewer stop per day than you think you can do. Anything missed moves to the next day.</li>
-      </ol>
+      <RouteSteps steps={steps} />
 
-      <h2 className={s.h2}>How VoyZa does it</h2>
-      <p className={s.p}>
-        Save the places by search or by long-pressing the map, give the trip its days, and let Auto-plan propose
-        which places go on which day. Then tap Optimize on each day: VoyZa reorders the stops into the shortest
-        route on real streets and tells you how much backtracking it removed. Pins show opening hours for your
-        planned arrival. On the trip, stops you did not reach are carried forward to today, so the plan survives
-        a slow morning.
-      </p>
-      <p className={s.p}>
-        Creating a trip and previewing an Auto-plan proposal are free. Adding places and applying a proposal
-        need VoyZa Pro, shown in the app with current prices; the yearly plan starts with a free trial.
-      </p>
+      <InApp>
+        <p className={s.p}>
+          Save the places by search or by long-pressing the map, give the trip its days, and let Auto-plan propose
+          which places go on which day. Then tap Optimize on each day: VoyZa reorders the stops into the shortest
+          route on real streets and tells you how much backtracking it removed. Pins show opening hours for your
+          planned arrival. On the trip, stops you did not reach are carried forward to today, so the plan survives
+          a slow morning.
+        </p>
+        <p className={s.p}>
+          Creating a trip and previewing an Auto-plan proposal are free. Adding places and applying a proposal
+          need VoyZa Pro, shown in the app with current prices; the yearly plan starts with a free trial.
+        </p>
+      </InApp>
 
       <h2 className={s.h2}>Common mistakes</h2>
       <ul className={s.ul}>

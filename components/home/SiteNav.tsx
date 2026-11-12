@@ -10,7 +10,8 @@ const LINKS = [
   { href: '#faq', label: 'FAQ' },
 ]
 
-export default function SiteNav() {
+/** `base` is '' on the home page (in-page anchors) and '/' elsewhere, so the links lead back to home. */
+export default function SiteNav({ base = '' }: { base?: string }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function SiteNav() {
       }`}
     >
       <nav aria-label="Main" className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5 sm:px-8">
-        <a href="#top" className="flex items-center gap-2.5 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-coral">
+        <a href={base || '#top'} className="flex items-center gap-2.5 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-coral">
           <img src="/brand/voyza-icon.png" alt="" width={32} height={32} className="h-8 w-8 rounded-[9px] shadow-sm" />
           <span className="font-display text-[22px] leading-none text-ink">VoyZa</span>
         </a>
@@ -35,7 +36,7 @@ export default function SiteNav() {
           {LINKS.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
+                href={base + l.href}
                 className="font-label text-[11px] uppercase tracking-[.16em] text-ink-soft underline-offset-[7px] transition-colors hover:text-ink hover:underline hover:decoration-coral hover:decoration-2 focus:outline-none focus-visible:text-ink focus-visible:underline focus-visible:decoration-coral"
               >
                 {l.label}

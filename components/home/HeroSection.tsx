@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { POSITIONING } from '../InfoPage'
+import { POSITIONING } from '../site'
 import StoreBadges from './StoreBadges'
 import UntangleMap from './UntangleMap'
 

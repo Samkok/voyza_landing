@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { APP_STORE, PLAY_STORE } from '../InfoPage'
+import { APP_STORE, PLAY_STORE } from '../site'
 
 const base =
   'inline-flex min-w-[12.5rem] items-center gap-3 rounded-2xl px-5 py-3 transition hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2 focus-visible:ring-offset-paper'

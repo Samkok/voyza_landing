@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import InfoPage, { FaqSection, styles as s, type Faq } from '@/components/InfoPage'
+import InfoPage, { FaqSection, InApp, RouteSteps, styles as s, type Faq, type Step } from '@/components/InfoPage'
 
 export const metadata: Metadata = {
   title: 'Plan a group trip together on one map',
@@ -15,29 +15,34 @@ const faqs: Faq[] = [
   { q: 'Can I share the plan with someone who does not have the app?', a: 'Yes. Share the trip as a link that opens in any browser with the stops and the map, or as a route card image. Someone with the app can copy the whole trip into their own VoyZa with a code.' },
 ]
 
+const steps: Step[] = [
+  { title: 'One owner, one trip', body: <>Someone creates the trip and invites the rest. Decisions live in the trip, not in the thread.</> },
+  { title: 'Everyone adds, nobody argues yet', body: <>Each person drops their places on the shared map with a tag. Seeing them together ends most arguments before they start.</> },
+  { title: 'Group by day, then optimize', body: <>Places near each other go on the same day; the route for each day is ordered once, by the app, not by whoever shouts loudest.</> },
+  { title: 'Give the plan to the people who are not in the app', body: <>A link anyone can open, or a route card in the chat, so grandparents and the friend who refuses to install things still know where to be.</> },
+]
+
 export default function Page() {
   return (
     <InfoPage
-      title="Plan a group trip together on one map"
+      kicker="Guide · Group trips"
+      title="Plan a group trip"
+      titleAccent="together on one map"
       lead="Group trips fail in the chat: forty suggestions, no map, and nobody sure what was decided. One shared trip fixes that."
       updated="2026-11-10"
     >
       <h2 className={s.h2}>The method</h2>
-      <ol className={s.ol}>
-        <li><span className={s.strong}>One owner, one trip.</span> Someone creates the trip and invites the rest. Decisions live in the trip, not in the thread.</li>
-        <li><span className={s.strong}>Everyone adds, nobody argues yet.</span> Each person drops their places on the shared map with a tag. Seeing them together ends most arguments before they start.</li>
-        <li><span className={s.strong}>Group by day, then optimize.</span> Places near each other go on the same day; the route for each day is ordered once, by the app, not by whoever shouts loudest.</li>
-        <li><span className={s.strong}>Give the plan to the people who are not in the app.</span> A link anyone can open, or a route card in the chat, so grandparents and the friend who refuses to install things still know where to be.</li>
-      </ol>
+      <RouteSteps steps={steps} />
 
-      <h2 className={s.h2}>How VoyZa does it</h2>
-      <p className={s.p}>
-        Create the trip, invite people by email as editors or viewers, and plan on one map that
-        updates live on every phone. Tap Optimize on each day to order everyone's places into the shortest
-        route. Share the finished plan as a link that works without the app, or as a code that copies the trip
-        into a friend's VoyZa. Planning together is on the free plan; adding new places needs VoyZa Pro for
-        whoever adds them.
-      </p>
+      <InApp>
+        <p className={s.p}>
+          Create the trip, invite people by email as editors or viewers, and plan on one map that
+          updates live on every phone. Tap Optimize on each day to order everyone's places into the shortest
+          route. Share the finished plan as a link that works without the app, or as a code that copies the trip
+          into a friend's VoyZa. Planning together is on the free plan; adding new places needs VoyZa Pro for
+          whoever adds them.
+        </p>
+      </InApp>
 
       <FaqSection faqs={faqs} />
     </InfoPage>

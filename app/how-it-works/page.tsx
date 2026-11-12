@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import InfoPage, { FaqSection, POSITIONING, styles as s, type Faq } from '@/components/InfoPage'
+import InfoPage, { FaqSection, InApp, POSITIONING, RouteSteps, styles as s, type Faq, type Step } from '@/components/InfoPage'
 
 export const metadata: Metadata = {
   title: 'How VoyZa works: trip route planner for multi-stop days',
@@ -51,23 +51,39 @@ const faqs: Faq[] = [
   },
 ]
 
+const steps: Step[] = [
+  { title: 'Save places', body: <>Search by name, or long-press the map to see what is nearby. Give each place a tag: food, sights, culture, nature, shopping, nightlife, transport or stay. Pins take the tag's colour.</> },
+  { title: 'Set the days', body: <>Add the dates of the trip, or leave them open and decide later. Arrival and departure times shape the first and last day.</> },
+  { title: 'Tap Optimize', body: <>VoyZa reorders the day's places into the shortest route using real roads and paths, and shows how much backtracking it removed. Auto-plan goes further and proposes which places belong on which day.</> },
+  { title: 'Check the hours', body: <>Pins turn red when a place is closed at your planned arrival and yellow when it is about to close, so you are not planning around locked doors.</> },
+  { title: 'Go', body: <>On the day, VoyZa routes you from where you stand to the next stop, asks whether to mark a stop done when you arrive, and moves anything you did not reach to today.</> },
+  { title: 'Share', body: <>Send a route card, a link that opens without the app, or a code that lets a friend copy the whole trip into their VoyZa.</> },
+]
+
 export default function HowItWorksPage() {
   return (
     <InfoPage
-      title="How VoyZa works"
+      kicker="The app, explained"
+      title="How VoyZa"
+      titleAccent="works"
       lead={POSITIONING}
       updated="2026-11-10"
     >
-      <section id="demo" className="mt-2 mb-4">
-        <h2 className={s.h2}>Optimize, in 20 seconds</h2>
-        <p className={s.p}>
-          A day in Paris with 12 saved places: open the day, tap Optimize, choose where the day starts,
-          and VoyZa orders the stops into one route. At the end, one leg is switched from driving to
-          transit and the total updates.
-        </p>
+      <section id="demo" data-reveal className="mb-4 mt-2 grid items-center gap-8 sm:grid-cols-[1fr_15rem] sm:gap-10">
+        <div>
+          <p className="font-label text-[11px] uppercase tracking-[.2em] text-coral-ink">20-second demo</p>
+          <h2 className="mb-4 mt-3 text-balance font-display text-[clamp(1.75rem,3.4vw,2.3rem)] leading-[1.08] tracking-[-.012em] text-ink">
+            Optimize, in 20 seconds
+          </h2>
+          <p className={s.p}>
+            A day in Paris with 12 saved places: open the day, tap Optimize, choose where the day starts,
+            and VoyZa orders the stops into one route. At the end, one leg is switched from driving to
+            transit and the total updates.
+          </p>
+        </div>
         <div className="flex justify-center">
           <video
-            className="w-full max-w-[320px] rounded-[28px] shadow-xl border border-gray-200 bg-black"
+            className="w-full max-w-[15rem] rounded-[30px] border-[7px] border-ink bg-ink shadow-[0_30px_60px_-30px_rgba(19,34,56,.75)]"
             controls
             playsInline
             muted
@@ -89,7 +105,7 @@ export default function HowItWorksPage() {
               '@type': 'VideoObject',
               name: 'VoyZa: optimizing a day in Paris in 20 seconds',
               description:
-                'Twelve saved places in Paris reordered into one route with VoyZa\u2019s Optimize, then one leg switched to transit.',
+                'Twelve saved places in Paris reordered into one route with VoyZa’s Optimize, then one leg switched to transit.',
               thumbnailUrl: ['https://voyza.xtremon.com/optimize-demo-poster.jpg'],
               contentUrl: 'https://voyza.xtremon.com/optimize-demo.mp4',
               uploadDate: '2026-10-26',
@@ -122,28 +138,22 @@ export default function HowItWorksPage() {
       </ul>
 
       <h2 className={s.h2}>How it works, step by step</h2>
-      <ol className={s.ol}>
-        <li><span className={s.strong}>Save places.</span> Search by name, or long-press the map to see what is nearby. Give each place a tag: food, sights, culture, nature, shopping, nightlife, transport or stay. Pins take the tag's colour.</li>
-        <li><span className={s.strong}>Set the days.</span> Add the dates of the trip, or leave them open and decide later. Arrival and departure times shape the first and last day.</li>
-        <li><span className={s.strong}>Tap Optimize.</span> VoyZa reorders the day's places into the shortest route using real roads and paths, and shows how much backtracking it removed. Auto-plan goes further and proposes which places belong on which day.</li>
-        <li><span className={s.strong}>Check the hours.</span> Pins turn red when a place is closed at your planned arrival and yellow when it is about to close, so you are not planning around locked doors.</li>
-        <li><span className={s.strong}>Go.</span> On the day, VoyZa routes you from where you stand to the next stop, asks whether to mark a stop done when you arrive, and moves anything you did not reach to today.</li>
-        <li><span className={s.strong}>Share.</span> Send a route card, a link that opens without the app, or a code that lets a friend copy the whole trip into their VoyZa.</li>
-      </ol>
+      <RouteSteps steps={steps} />
 
-      <h2 className={s.h2}>What is free and what Pro adds</h2>
-      <p className={s.p}>
-        Free, with no account: creating trips, the sample trip, route optimization and day planning for the
-        places in a trip, opening hours, sharing, and one copy of a trip shared with you. A free account adds
-        sync across devices and planning together with friends.
-      </p>
-      <p className={s.p}>
-        VoyZa Pro lets you add your own places, apply Auto-plan proposals across the whole trip, and copy more
-        than one shared trip. It is sold through the App Store and Google Play as a weekly Trip Pass, monthly,
-        yearly, or a one-time Lifetime purchase. The yearly plan starts with a 7-day free trial where the store
-        offers it; prices are shown in the app before you confirm, and subscriptions are cancelled through
-        your store account.
-      </p>
+      <InApp title="What is free and what Pro adds">
+        <p className={s.p}>
+          Free, with no account: creating trips, the sample trip, route optimization and day planning for the
+          places in a trip, opening hours, sharing, and one copy of a trip shared with you. A free account adds
+          sync across devices and planning together with friends.
+        </p>
+        <p className={s.p}>
+          VoyZa Pro lets you add your own places, apply Auto-plan proposals across the whole trip, and copy more
+          than one shared trip. It is sold through the App Store and Google Play as a weekly Trip Pass, monthly,
+          yearly, or a one-time Lifetime purchase. The yearly plan starts with a 7-day free trial where the store
+          offers it; prices are shown in the app before you confirm, and subscriptions are cancelled through
+          your store account.
+        </p>
+      </InApp>
 
       <h2 className={s.h2}>How it compares</h2>
       <ul className={s.ul}>
