@@ -1,0 +1,230 @@
+/* The link pages (/r referral, /c shared trip): one card on the paper map, in the
+   home page's style. Plain HTML, so the fonts are self-hosted copies of the
+   site's own Latin subsets (all SIL Open Font License). */
+
+@font-face {
+  font-family: 'Gloock';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/gloock-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/instrument-sans-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/dm-mono-500-latin.woff2') format('woff2');
+}
+
+:root {
+  --paper: #f2eadb;
+  --paper-hi: #fbf6ec;
+  --paper-line: #e2d5be;
+  --paper-deep: #e8dcc6;
+  --ink: #132238;
+  --ink-soft: #3b475a;
+  --ink-mute: #5f6878;
+  --coral: #e4553f;
+  --coral-ink: #b83a26;
+  --kraft: #e7cf9c;
+  --display: 'Gloock', Georgia, serif;
+  --body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --label: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--paper) url('/brand/contours.svg') 50% 0 / 1400px 1000px;
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  width: 100%; max-width: 460px;
+  background: var(--paper-hi);
+  border: 1px solid var(--paper-line);
+  border-radius: 28px;
+  box-shadow: 0 30px 70px -40px rgba(19, 34, 56, .6);
+  overflow: hidden;
+}
+
+/* Brand row, then the dotted route that starts every page on the site. */
+.header { padding: 24px 28px 0; }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--ink); text-decoration: none;
+  font-family: var(--display); font-size: 24px; line-height: 1;
+  border-radius: 8px;
+}
+.brand img { width: 32px; height: 32px; border-radius: 9px; }
+.route {
+  position: relative; height: 20px; margin-top: 20px;
+}
+.route::before {
+  content: ''; position: absolute; left: 0; top: 50%;
+  width: 14px; height: 14px; transform: translateY(-50%);
+  border: 3px solid var(--ink); border-radius: 50%; background: var(--paper-hi);
+}
+.route .line {
+  position: absolute; left: 20px; right: 26px; top: 50%; height: 6px; transform: translateY(-50%);
+  background: radial-gradient(circle, var(--coral) 1.7px, transparent 2.2px) 0 50% / 13px 6px repeat-x;
+  animation: draw-x 1.2s cubic-bezier(.6, 0, .3, 1) .3s both;
+}
+.route svg {
+  position: absolute; right: 0; top: -12px; width: 24px; height: 30px;
+  transform-origin: 50% 100%;
+  animation: pin-land .6s cubic-bezier(.3, 1.5, .5, 1) 1.35s both;
+}
+@keyframes draw-x { from { clip-path: inset(0 100% 0 0); } }
+@keyframes pin-land { from { opacity: 0; transform: translateY(-12px) scale(.6); } }
+
+.body { padding: 26px 28px 30px; }
+
+.kicker {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--label); font-weight: 500; font-size: 11px;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.kicker::before {
+  content: ''; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--coral); box-shadow: 0 0 0 4px rgba(228, 85, 63, .18);
+}
+
+h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: 31px; line-height: 1.08; letter-spacing: -.012em;
+  margin-bottom: 12px; text-wrap: balance;
+}
+p.sub { color: var(--ink-soft); font-size: 16.5px; line-height: 1.6; margin-bottom: 24px; }
+
+/* The code, as a ticket stub. */
+.code-pill {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--paper-deep);
+  border: 2px dashed var(--coral); border-radius: 16px;
+  padding: 16px; margin-bottom: 10px;
+  font-family: var(--label); font-weight: 500;
+  font-size: 22px; letter-spacing: .12em; color: var(--ink);
+}
+
+button, .btn-reset { font-family: inherit; }
+
+.copy-btn {
+  width: 100%; cursor: pointer;
+  border: 2px solid var(--ink); background: var(--ink); color: var(--paper-hi);
+  font-weight: 600; font-size: 16px; padding: 13px; border-radius: 16px;
+  margin-bottom: 28px;
+  transition: background-color .2s, border-color .2s, transform .15s;
+}
+.copy-btn:hover { background: #1d3150; border-color: #1d3150; }
+.copy-btn:active { transform: scale(.98); }
+.copy-btn.copied { background: #2e7d5b; border-color: #2e7d5b; color: #fff; }
+
+/* Numbered steps joined by the dotted route line. */
+.steps { margin-bottom: 26px; }
+.steps-title { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 14px; }
+.steps ol { list-style: none; counter-reset: step; }
+.steps li {
+  counter-increment: step;
+  position: relative; padding: 3px 0 24px 42px;
+  color: var(--ink-soft); font-size: 15px; line-height: 1.55;
+}
+.steps li:last-child { padding-bottom: 0; }
+.steps li b { color: var(--ink); }
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute; left: 0; top: 0;
+  width: 28px; height: 28px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--coral); color: #fff;
+  font-family: var(--label); font-weight: 500; font-size: 11px;
+  box-shadow: 0 0 0 4px var(--paper-hi);
+}
+.steps li:not(:last-child)::after {
+  content: ''; position: absolute; left: 11px; top: 33px; bottom: 3px; width: 6px;
+  background: radial-gradient(circle, var(--coral) 1.5px, transparent 2px) 50% 0 / 6px 8px repeat-y;
+}
+
+/* Store badges, as on the home page. */
+.stores { display: flex; flex-direction: column; gap: 10px; }
+.store-btn {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  text-decoration: none; padding: 12px 16px; border-radius: 16px;
+  border: 2px solid var(--ink);
+  transition: background-color .2s, transform .15s;
+}
+.store-btn svg { width: 22px; height: 22px; flex: none; fill: currentColor; }
+.store-btn .small {
+  display: block; font-family: var(--label); font-weight: 500;
+  font-size: 10px; letter-spacing: .16em; text-transform: uppercase; opacity: .75;
+}
+.store-btn .big { display: block; margin-top: 3px; font-weight: 600; font-size: 17px; line-height: 1; }
+.store-btn > span { text-align: left; line-height: 1; min-width: 9.5rem; }
+.store-primary { background: var(--ink); color: var(--paper-hi); }
+.store-primary:hover { background: #1d3150; }
+.store-secondary { background: transparent; color: var(--ink); }
+.store-secondary:hover { background: var(--paper); }
+
+.footer {
+  padding: 16px 28px; border-top: 1px solid var(--paper-line);
+  font-family: var(--label); font-weight: 500; font-size: 10.5px;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--ink-mute);
+}
+.footer a { color: inherit; text-decoration: none; }
+.footer a:hover { color: var(--ink); }
+
+/* Shared trip: open in the app, with a hint if nothing happened. */
+.open-btn {
+  display: block; width: 100%; text-align: center; text-decoration: none;
+  background: var(--coral-ink); color: #fff;
+  font-weight: 600; font-size: 17px; padding: 16px; border-radius: 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 14px 26px -16px rgba(184, 58, 38, .9);
+  transition: background-color .2s, transform .15s;
+}
+.open-btn:hover { background: #a1311f; }
+.open-btn:active { transform: scale(.98); }
+.hint {
+  display: none; color: var(--ink); background: #f6e7c4; border: 1px solid var(--kraft);
+  border-radius: 12px; padding: 10px 12px; font-size: 14px; line-height: 1.5;
+  margin-bottom: 10px;
+}
+.hint.show { display: block; }
+.or {
+  display: flex; align-items: center; gap: 12px;
+  color: var(--ink-mute); font-family: var(--label); font-weight: 500;
+  font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; text-align: center;
+  margin: 18px 0 12px;
+}
+.or::before, .or::after { content: ''; flex: 1; height: 1px; background: var(--paper-line); }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--coral); outline-offset: 2px;
+}
+
+@media (max-width: 380px) {
+  .header, .body { padding-left: 22px; padding-right: 22px; }
+  h1 { font-size: 28px; }
+  .code-pill { font-size: 19px; letter-spacing: .08em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route .line, .route svg { animation: none; }
+  .copy-btn, .store-btn, .open-btn { transition: none; }
+}

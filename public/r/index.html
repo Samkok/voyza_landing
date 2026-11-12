@@ -8,55 +8,23 @@
 <meta property="og:title" content="A free month of VoyZa Pro 🎁">
 <meta property="og:description" content="Your friend invited you to VoyZa — smart trip routes, zero backtracking. This code gives you 1 month of Pro free.">
 <meta property="og:type" content="website">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
-    background: #f4f6f8; color: #16202b; min-height: 100vh;
-    display: flex; align-items: center; justify-content: center; padding: 24px 16px;
-  }
-  .card {
-    max-width: 440px; width: 100%; background: #fff; border-radius: 20px;
-    overflow: hidden; border: 1px solid #e6e9ee;
-    box-shadow: 0 10px 30px rgba(22, 32, 43, .08);
-  }
-  .header {
-    background: linear-gradient(135deg, #2B1D70, #2E5BD0 60%, #15BFB6);
-    padding: 26px 28px; color: #fff; font-weight: 800; font-size: 22px;
-  }
-  .body { padding: 28px; }
-  h1 { font-size: 24px; line-height: 1.25; margin-bottom: 10px; }
-  p.sub { color: #46535f; font-size: 15px; line-height: 1.55; margin-bottom: 22px; }
-  .code-pill {
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    background: #eef3ff; border: 2px dashed #2E5BD0; border-radius: 14px;
-    padding: 16px; margin-bottom: 12px;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 22px; font-weight: 800; letter-spacing: 2px; color: #16202b;
-  }
-  .copy-btn {
-    width: 100%; border: 0; background: #2E5BD0; color: #fff; font-weight: 700;
-    font-size: 16px; padding: 14px; border-radius: 12px; cursor: pointer;
-    margin-bottom: 26px; font-family: inherit;
-  }
-  .copy-btn.copied { background: #22C55E; }
-  .steps { color: #46535f; font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
-  .steps b { color: #16202b; }
-  .stores { display: flex; flex-direction: column; gap: 10px; }
-  .store-btn {
-    display: block; text-align: center; text-decoration: none; font-weight: 700;
-    font-size: 15px; padding: 14px; border-radius: 12px;
-  }
-  .store-primary { background: #16202b; color: #fff; }
-  .store-secondary { background: #fff; color: #16202b; border: 1.5px solid #d4dae2; }
-  .footer { padding: 16px 28px; color: #9aa4ad; font-size: 12px; border-top: 1px solid #eef1f4; }
-</style>
+<link rel="preload" href="/fonts/gloock-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/brand/card.css">
 </head>
 <body>
   <div class="card">
-    <div class="header">VoyZa</div>
+    <div class="header">
+      <a class="brand" href="/"><img src="/brand/voyza-icon.png" alt="" width="32" height="32">VoyZa</a>
+      <div class="route" aria-hidden="true">
+        <span class="line"></span>
+        <svg viewBox="0 0 24 30"><path d="M12 29s9-9.6 9-17A9 9 0 0 0 3 12c0 7.4 9 17 9 17z" fill="#E4553F"/><circle cx="12" cy="11.5" r="3.4" fill="#FBF6EC"/></svg>
+      </div>
+    </div>
     <div class="body">
-      <h1 id="headline">Your friend gave you 1 month of VoyZa Pro 🎁</h1>
+      <p class="kicker">Invitation</p>
+      <h1 id="headline">Your friend gave you 1&nbsp;month of VoyZa Pro&nbsp;🎁</h1>
       <p class="sub">VoyZa plans your trip days for you — save the places you
         want to see and it puts them in the smartest order. No backtracking.</p>
 
@@ -66,20 +34,22 @@
       </div>
 
       <div class="steps">
-        <b>How to claim your free month:</b><br>
-        1. Install VoyZa below<br>
-        2. Create your account<br>
-        3. Enter this code at signup — Pro unlocks the moment you verify
+        <p class="steps-title">How to claim your free month:</p>
+        <ol>
+          <li>Install VoyZa below</li>
+          <li>Create your account</li>
+          <li>Enter this code at signup — Pro unlocks the moment you verify</li>
+        </ol>
       </div>
 
       <div class="stores" id="stores">
         <a class="store-btn store-primary" id="ios-btn"
-           href="https://apps.apple.com/us/app/voyza/id6758559163">Download on the App Store</a>
+           href="https://apps.apple.com/us/app/voyza/id6758559163"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><span class="small">Download on the</span> <span class="big">App Store</span></span></a>
         <a class="store-btn store-secondary" id="android-btn"
-           href="https://play.google.com/store/apps/details?id=com.superiordev.voyza">Get it on Google Play</a>
+           href="https://play.google.com/store/apps/details?id=com.superiordev.voyza"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><span class="small">Get it on</span> <span class="big">Google Play</span></span></a>
       </div>
     </div>
-    <div class="footer">VoyZa · voyza.xtremon.com</div>
+    <div class="footer"><a href="/">VoyZa · voyza.xtremon.com</a></div>
   </div>
 
 <script>
