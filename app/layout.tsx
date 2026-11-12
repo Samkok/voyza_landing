@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { fontVariables } from './fonts'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -62,8 +63,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={fontVariables} suppressHydrationWarning>
       <body className={inter.className}>
+        {/* Lets CSS hide scroll-reveal content only when a script will reveal it. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }} />
         {children}
       </body>

@@ -8,7 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Home page: the "paper map" store set (paper, ink, coral) plus the app's own cyan.
+      fontFamily: {
+        display: ['var(--font-display)', 'Georgia', 'serif'],
+        accent: ['var(--font-accent)', 'Georgia', 'serif'],
+        body: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        label: ['var(--font-label)', 'ui-monospace', 'monospace'],
+        stamp: ['var(--font-stamp)', 'Impact', 'sans-serif'],
+        hand: ['var(--font-hand)', 'cursive'],
+      },
       colors: {
+        paper: { DEFAULT: '#F2EADB', hi: '#FBF6EC', line: '#E2D5BE', deep: '#E8DCC6' },
+        ink: { DEFAULT: '#132238', soft: '#3B475A', mute: '#5F6878', night: '#0F1C2F', rule: '#24344D' },
+        coral: { DEFAULT: '#E4553F', ink: '#B83A26' },
+        kraft: '#E7CF9C',
+        signal: '#00D4FF',
+        water: '#C6D7D5',
+        park: '#DEDFC1',
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',

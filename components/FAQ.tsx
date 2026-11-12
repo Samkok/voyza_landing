@@ -27,35 +27,37 @@ function FAQItem({ question, answer, id, isActive, onOpen }: FAQItemProps) {
   }
 
   return (
-    <div id={id} className="scroll-mt-20 bg-white rounded-xl border-2 border-gray-200 overflow-hidden hover:border-primary-300 transition-colors">
-      <button
-        onClick={handleClick}
-        className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-      >
-        <h3 className="text-lg font-bold text-gray-900 flex-1">{question}</h3>
-        <svg
-          className={`w-6 h-6 text-primary-600 flex-shrink-0 transition-transform ${
-            isOpen ? 'rotate-180' : ''
-          }`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+    <div id={id} className="scroll-mt-24 border-b border-ink/15">
+      <h3>
+        <button
+          type="button"
+          onClick={handleClick}
+          aria-expanded={isOpen}
+          aria-controls={`${id}-answer`}
+          className="group flex w-full items-start justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-coral"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-      {isOpen && (
-        <div className="px-6 pb-5 pt-0">
-          <div className="text-gray-700 leading-relaxed whitespace-pre-line">
-            {answer}
-          </div>
+          <span className="font-display text-[21px] leading-snug text-ink sm:text-[23px]">{question}</span>
+          <span
+            aria-hidden="true"
+            className={`relative mt-1 h-7 w-7 shrink-0 rounded-full border transition duration-300 ${
+              isOpen ? 'rotate-45 border-ink bg-ink text-paper-hi' : 'border-ink/25 text-ink group-hover:border-ink'
+            }`}
+          >
+            <span className="absolute left-1/2 top-1/2 h-px w-3 -translate-x-1/2 -translate-y-1/2 bg-current" />
+            <span className="absolute left-1/2 top-1/2 h-3 w-px -translate-x-1/2 -translate-y-1/2 bg-current" />
+          </span>
+        </button>
+      </h3>
+      <div
+        id={`${id}-answer`}
+        aria-hidden={!isOpen}
+        className="grid transition-[grid-template-rows] duration-300 ease-out"
+        style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
+      >
+        <div className="overflow-hidden">
+          <div className="whitespace-pre-line pb-7 pr-2 text-[17px] leading-relaxed text-ink-soft sm:pr-12">{answer}</div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -187,17 +189,22 @@ Important: Account deletion is permanent and cannot be undone. If you wish to re
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-teal-50/30 to-primary-50/30">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary-600 via-teal-600 to-accent-600 bg-clip-text text-transparent mb-4">
-            Frequently Asked Questions
+    <section id="faq" className="px-5 py-24 sm:px-8 sm:py-32">
+      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+        <header data-reveal className="lg:sticky lg:top-28 lg:self-start">
+          <p className="font-label text-[11px] uppercase tracking-[.2em] text-coral-ink">FAQ</p>
+          <h2 className="mt-4 font-display text-[clamp(2.25rem,4.4vw,3.5rem)] leading-[1.02] tracking-[-.018em] text-ink">
+            Questions, <em className="font-accent text-[1.08em] italic text-coral">answered.</em>
           </h2>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto font-medium">
-            Everything you need to know about VoyZa
+          <p className="mt-6 max-w-sm text-[17px] leading-relaxed text-ink-soft">
+            Something else? Write to{' '}
+            <a href="mailto:hengsamkok76@gmail.com" className="text-ink underline decoration-coral decoration-2 underline-offset-4">
+              hengsamkok76@gmail.com
+            </a>
+            .
           </p>
-        </div>
-        <div className="space-y-4">
+        </header>
+        <div className="border-t border-ink/15">
           {faqs.map((faq, index) => {
             const id = generateId(faq.question)
             return (
