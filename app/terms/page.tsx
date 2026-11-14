@@ -3,7 +3,7 @@ import LegalPage, { legal } from '@/components/LegalPage'
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Terms and Conditions" meta={<p>Last updated: November 10, 2026</p>}>
+    <LegalPage title="Terms and Conditions" meta={<p>Last updated: November 14, 2026</p>}>
       <p className={legal.p}>
         Welcome to VoyZa ("App", "we", "our", or "us"). These Terms and Conditions ("Terms") govern your access to and use of the VoyZa mobile application and related services.
       </p>
@@ -26,8 +26,8 @@ export default function TermsPage() {
         <ul className={legal.ul}>
           <li>Trader: Kok Heng (sole trader, trading as VoyZa), Phnom Penh, Cambodia</li>
           <li>Email: <a href="mailto:hengsamkok76@gmail.com" className={legal.a}>hengsamkok76@gmail.com</a></li>
-          {/* Postal address and phone: pending; swap this line when decided, together with the privacy policy and the in-app Terms. */}
-          <li>Postal address: available on request by email</li>
+          {/* Postal address set 2026-11-14 (as on the Play account); keep it identical in the privacy policy, the in-app Terms and the EMAIL_POSTAL_ADDRESS secret. Public phone number still undecided. */}
+          <li>Postal address: Home 6, Street P33, Chip Mong 598, Phnom Kha Pir, Chrang Chamreh Ti Pir, Phnom Penh 12000, Cambodia</li>
         </ul>
       </section>
 
@@ -278,7 +278,7 @@ export default function TermsPage() {
             hengsamkok76@gmail.com
           </a>
           <p className={`${legal.label} mt-4`}>Offered by:</p>
-          <p className={legal.value}>Kok Heng (sole trader, trading as VoyZa), Phnom Penh, Cambodia — postal address on request</p>
+          <p className={legal.value}>Kok Heng (sole trader, trading as VoyZa), Home 6, Street P33, Chip Mong 598, Phnom Kha Pir, Chrang Chamreh Ti Pir, Phnom Penh 12000, Cambodia</p>
           <p className={`${legal.label} mt-4`}>App Name:</p>
           <p className={legal.value}>VoyZa</p>
         </div>

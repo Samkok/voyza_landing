@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<!-- The address carries a private token: never pass it on to other sites. -->
+<meta name="referrer" content="no-referrer">
+<title>Unsubscribe · VoyZa</title>
+<link rel="preload" href="/fonts/gloock-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/icon.png">
+<link rel="stylesheet" href="/brand/card.css">
+<style>
+  button.open-btn { border: 0; cursor: pointer; font-family: inherit; }
+  button.open-btn:disabled { opacity: .6; cursor: default; }
+  .hint a { color: inherit; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <a class="brand" href="/"><img src="/brand/voyza-icon.png" alt="" width="32" height="32">VoyZa</a>
+      <div class="route" aria-hidden="true">
+        <span class="line"></span>
+        <svg viewBox="0 0 24 30"><path d="M12 29s9-9.6 9-17A9 9 0 0 0 3 12c0 7.4 9 17 9 17z" fill="#E4553F"/><circle cx="12" cy="11.5" r="3.4" fill="#FBF6EC"/></svg>
+      </div>
+    </div>
+    <div class="body">
+      <p class="kicker">Email preferences</p>
+      <h1 id="headline">Unsubscribe from VoyZa emails</h1>
+      <p class="sub" id="sub">You'll stop getting tips, reminders and trip
+        invitations from VoyZa at this address. Sign-in codes and messages
+        about your account still arrive.</p>
+      <button class="open-btn" id="unsub-btn" type="button">Unsubscribe</button>
+      <div class="hint" id="hint" role="status"></div>
+    </div>
+    <div class="footer"><a href="/">VoyZa · voyza.xtremon.com</a></div>
+  </div>
+
+<script>
+(function () {
+  var ENDPOINT = 'https://dkbibfjszsohtixjxlle.supabase.co/functions/v1/email-unsubscribe';
+  var CONTACT = 'hengsamkok76@gmail.com';
+  var token = new URLSearchParams(location.search).get('t') || '';
+  var valid = /^[A-Za-z0-9_-]{20,100}$/.test(token);
+
+  var btn = document.getElementById('unsub-btn');
+  var hint = document.getElementById('hint');
+  var headline = document.getElementById('headline');
+  var sub = document.getElementById('sub');
+
+  function showHint(html) { hint.innerHTML = html; hint.className = 'hint show'; }
+  var mail = '<a href="mailto:' + CONTACT + '?subject=Unsubscribe">' + CONTACT + '</a>';
+
+  if (!valid) {
+    headline.textContent = 'This unsubscribe link is incomplete';
+    sub.textContent = 'Open the Unsubscribe link in the email again.';
+    btn.style.display = 'none';
+    showHint('Still stuck? Email ' + mail + ' and we will remove your address.');
+    return;
+  }
+
+  btn.addEventListener('click', function () {
+    btn.disabled = true;
+    btn.textContent = 'Unsubscribing…';
+    hint.className = 'hint';
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ t: token })
+    }).then(function (res) {
+      return res.json().catch(function () { return {}; }).then(function (body) {
+        return { status: res.status, body: body };
+      });
+    }).then(function (r) {
+      if (r.body && r.body.ok) {
+        headline.textContent = "You're unsubscribed";
+        sub.textContent = "VoyZa won't send tips, reminders or trip invitations to this address again. Sign-in codes and messages about your account still arrive.";
+        btn.style.display = 'none';
+        return;
+      }
+      btn.disabled = false;
+      btn.textContent = 'Unsubscribe';
+      if (r.status === 404 || r.status === 400) {
+        showHint('This link has expired or is not valid. Email ' + mail + ' and we will remove your address.');
+      } else {
+        showHint('Something went wrong. Try again in a moment.');
+      }
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Unsubscribe';
+      showHint('Could not reach VoyZa. Check your connection and try again.');
+    });
+  });
+})();
+</script>
+</body>
+</html>

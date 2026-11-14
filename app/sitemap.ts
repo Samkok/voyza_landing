@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site}/plan/multi-day-itinerary`, lastModified: updated, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${site}/plan/multi-stop-road-trip`, lastModified: updated, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${site}/plan/group-trip`, lastModified: updated, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${site}/privacy`, lastModified: new Date('2026-11-09'), changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${site}/terms`, lastModified: new Date('2026-11-10'), changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${site}/privacy`, lastModified: new Date('2026-11-14'), changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${site}/terms`, lastModified: new Date('2026-11-14'), changeFrequency: 'yearly', priority: 0.3 },
   ]
 }

@@ -42,7 +42,7 @@ export default function PrivacyPage() {
       meta={
         <>
           <p>
-            <span>Last updated:</span> November 9, 2026
+            <span>Last updated:</span> November 14, 2026
           </p>
           <p>
             <span>Effective date:</span> October 8, 2026
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
         </p>
         <ul className={ul}>
           <li><strong className={strong}>Controller:</strong> Kok Heng (individual / sole trader, trading as VoyZa)</li>
-          <li><strong className={strong}>Postal address:</strong> available on request — email us and we will provide it</li>
+          <li><strong className={strong}>Postal address:</strong> Home 6, Street P33, Chip Mong 598, Phnom Kha Pir, Chrang Chamreh Ti Pir, Phnom Penh 12000, Cambodia</li>
           {/* Business address, not published: Chipmong 598, Street P33, Home 6, Phnom Penh, Cambodia */}
           <li><strong className={strong}>Country of establishment:</strong> Cambodia</li>
           <li><strong className={strong}>App:</strong> VoyZa (iOS and Android)</li>
@@ -248,7 +248,7 @@ export default function PrivacyPage() {
               <tr>
                 <td className={td}>Send lifecycle/marketing email (welcome, activation reminder, win-back)</td>
                 <td className={td}>Account &amp; identity (email)</td>
-                <td className={td}>Consent / soft opt-in — Art. 6(1)(a) / PECR Reg. 22; you can unsubscribe by emailing us</td>
+                <td className={td}>Consent / soft opt-in — Art. 6(1)(a) / PECR Reg. 22; every such email has an unsubscribe link, and you can also email us</td>
               </tr>
               <tr>
                 <td className={td}>Detect repeated free trials and referral abuse via the device check (device identifier)</td>
@@ -282,7 +282,7 @@ export default function PrivacyPage() {
           <strong className={strong}>Device-check balancing test (legitimate-interest assessment, Art. 6(1)(f) + ePrivacy/PECR).</strong> We rely on legitimate interests to read and store a device identifier to detect abuse of our free and promotional offers — repeated free trials from one device and referral-reward abuse (such as referring an additional account of your own from a device you have already used). We conducted a balancing test and concluded that: (a) the interest (preventing repeat-trial and referral-reward abuse of a paid service) is legitimate and necessary; (b) the processing is limited to a single identifier tied to your account and the trial date, is never used for advertising or cross-app tracking, and is retained for a limited period (see Section 10); and (c) the limited impact on you does not override our interest, particularly given your right to object below. Because reading an identifier from the device can engage ePrivacy/PECR, for EEA/UK/CH users this access occurs only in connection with a trial you actively start (a service you request) and is not used for any non-essential analytics or advertising purpose. You can <strong className={strong}>object</strong> to this processing at any time (see Section 13); we will assess any objection and, where it succeeds, cease the processing.
         </p>
         <p className={p}>
-          <strong className={strong}>Marketing email — soft opt-in.</strong> Lifecycle/marketing emails (welcome, activation reminder, win-back) are treated as direct marketing. We send them on a soft opt-in / consent basis to people who have an account, and you can unsubscribe at any time by emailing <Mail />; we will promptly stop sending them. Transactional and authentication emails (e.g., password reset) are separate and necessary to provide the service.
+          <strong className={strong}>Marketing email — soft opt-in.</strong> Lifecycle/marketing emails (welcome, activation reminder, win-back) are treated as direct marketing. We send them on a soft opt-in / consent basis to people who have an account, and you can unsubscribe at any time with the Unsubscribe link at the bottom of every such email (or your mail app's own Unsubscribe button), or by emailing <Mail />; an unsubscribe takes effect at once. Transactional and authentication emails (e.g., password reset) are separate and necessary to provide the service.
         </p>
         <p className={p}>
           Where we rely on consent, you can withdraw it at any time without affecting the lawfulness of processing before withdrawal (see Sections 6 and 13 for how).
@@ -400,7 +400,7 @@ export default function PrivacyPage() {
           Collaboration is a core feature of VoyZa, and it is the most important sharing surface to understand.
         </p>
         <ul className={ul}>
-          <li><strong className={strong}>Inviting collaborators:</strong> You invite someone to a trip by entering their email address. If that email belongs to an existing VoyZa account, our backend (Supabase) links them to the trip. If it does <strong className={strong}>not</strong> yet belong to a VoyZa account, we store a <strong className={strong}>pending invitation</strong> — the email address you entered, the trip, your user ID, and your referral code — so that when that person signs up with the same email they are automatically added to the trip and both of you may receive a referral reward. A pending invitation is deleted when it is claimed or when it expires (30 days). If the person is not yet a user we also email them the invitation (through Resend): it shows your first name — or the first part of your email address if you have not added a name — the trip's name and your referral code. We keep a log of the invitation emails we sent (your user ID, the address and the time) to enforce sending limits, for as long as your account exists. Only invite people who are happy to be contacted and added.</li>
+          <li><strong className={strong}>Inviting collaborators:</strong> You invite someone to a trip by entering their email address. If that email belongs to an existing VoyZa account, our backend (Supabase) links them to the trip. If it does <strong className={strong}>not</strong> yet belong to a VoyZa account, we store a <strong className={strong}>pending invitation</strong> — the email address you entered, the trip, your user ID, and your referral code — so that when that person signs up with the same email they are automatically added to the trip and both of you may receive a referral reward. A pending invitation is deleted when it is claimed or when it expires (30 days). If the person is not yet a user we also email them the invitation (through Resend): it shows your first name — or the first part of your email address if you have not added a name — the trip's name and your referral code. Every invitation email has an unsubscribe link, and an address that used it is not sent invitations again. We keep a log of the invitation emails we sent (your user ID, the address and the time) to enforce sending limits, for as long as your account exists. Only invite people who are happy to be contacted and added.</li>
           <li><strong className={strong}>Referral program:</strong> When you share a referral link or code and someone signs up through it — or when you invite a non-user as described above — we record a referral connecting you (the referrer) to that person (the referee) so we can grant the reward. The referee may receive promotional VoyZa Pro when they sign up with your code; your reward is granted only once they go on to start a <strong className={strong}>paid subscription</strong> (after any free trial). If you already have an active paid subscription when a reward is earned, we record it and apply it when your current paid period ends, so the reward is not lost. Referral rewards are subject to anti-fraud checks and the limits described in the app's Terms; see Sections 3 and 4.</li>
           <li><strong className={strong}>What collaborators can see:</strong> Once added, a collaborator with read or write access can see the <strong className={strong}>entire</strong> trip's contents — all saved places (names, precise coordinates, photos, scheduled dates, durations, tags and who added each one) and the trip name, description, dates and arrival and departure times. Edits stream between collaborators in real time.</li>
           <li><strong className={strong}>Collaborator emails are visible to the group:</strong> Every member of a shared trip can see the email address of every other member, and who invited whom. Members also see the trip owner's name (or email) and, in notifications, the name — or the first part of the email address — of whoever added a place or invited them, together with the place and trip names.</li>
@@ -596,6 +596,7 @@ export default function PrivacyPage() {
           <li><strong className={strong}>Analytics and advertising data (GA4):</strong> user-level data is retained in Google Analytics 4 for the configured <strong className={strong}>14-month</strong> user-data retention window and then automatically deleted; aggregated reporting may persist longer in de-identified form.</li>
           <li><strong className={strong}>Ads measurement data sent to Meta:</strong> held by Meta under its own retention rules as a controller (see Meta's Privacy Policy). We keep no copy beyond the aggregated campaign reports Meta shows us. Turning ads measurement off stops new events at once; data Meta already holds is managed through Meta's own tools, or by contacting Meta.</li>
           <li><strong className={strong}>Performance / stability data (Firebase Performance):</strong> retained for Firebase's standard performance retention window (up to approximately <strong className={strong}>90 days</strong> for detailed traces).</li>
+          <li><strong className={strong}>Unsubscribe list:</strong> if you unsubscribe, we keep your email address on a suppression list so that we never send you marketing email or invitations again. We keep it for as long as we send such emails, including after you delete your account, because honouring your choice requires it. Each email's unsubscribe code (a random code linked to the address it was sent to) is deleted after <strong className={strong}>13 months</strong>.</li>
           <li><strong className={strong}>Support and email records:</strong> retained for as long as needed to handle your request and keep reasonable business records (typically up to <strong className={strong}>24 months</strong>).</li>
         </ul>
         <p className={p}>When data is no longer needed, we delete or anonymize it.</p>
@@ -644,7 +645,7 @@ export default function PrivacyPage() {
         <ul className={ul}>
           <li><strong className={strong}>Withdraw consent to, or switch off, usage analytics or ads measurement:</strong> in the App at <strong className={strong}>Settings → Preferences</strong>, using the two switches. On iOS you can also withdraw tracking permission in <strong className={strong}>iOS Settings → Privacy &amp; Security → Tracking</strong>; on Android you can reset or delete your Advertising ID in <strong className={strong}>Settings → Google → Ads</strong>.</li>
           <li><strong className={strong}>Object to legitimate-interest processing</strong> (e.g., the free-trial abuse device check or fraud/security analytics): email <Mail /> with the subject "Objection," identifying the processing; we will assess it and stop where required.</li>
-          <li><strong className={strong}>Unsubscribe from lifecycle/marketing email:</strong> email <Mail /> and we will stop promptly (these emails do not currently carry an unsubscribe link).</li>
+          <li><strong className={strong}>Unsubscribe from lifecycle/marketing email and invitations:</strong> use the <strong className={strong}>Unsubscribe</strong> link at the bottom of any such email, or email <Mail />.</li>
           <li><strong className={strong}>Delete your account/data:</strong> in-app (<strong className={strong}>Settings → Delete Account</strong>) or via <Ext href="https://voyza.xtremon.com/#how-can-i-delete-my-voyza-account">https://voyza.xtremon.com/#how-can-i-delete-my-voyza-account</Ext>.</li>
         </ul>
         <p className={p}>
@@ -749,7 +750,7 @@ export default function PrivacyPage() {
         </p>
         <div className={legal.card}>
           <p className={legal.label}>Controller:</p>
-          <p className={`${legal.value} mb-4`}>Kok Heng (individual, trading as VoyZa), Phnom Penh, Cambodia — postal address on request</p>
+          <p className={`${legal.value} mb-4`}>Kok Heng (individual, trading as VoyZa), Home 6, Street P33, Chip Mong 598, Phnom Kha Pir, Chrang Chamreh Ti Pir, Phnom Penh 12000, Cambodia</p>
           <p className={legal.label}>Email:</p>
           <a
             href="mailto:hengsamkok76@gmail.com"
